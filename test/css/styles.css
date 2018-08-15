@@ -1,0 +1,98 @@
+@font-face {
+  font-family: myriad;
+  src: url(../font/MyriadPro-SemiboldCondIt.ttf);
+}
+html {
+  font-family: myriad, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  word-wrap: normal;
+}
+.bgimg {
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 990px) {
+  main {
+    margin: 0;
+  }
+}
+header {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header a {
+  display: block;
+  height: 100%;
+}
+.logo {
+  height: 40px;
+  width: 143px;
+  background-image: url(../img/libertex-logo.png);
+}
+.badge {
+  height: 62px;
+  width: 129px;
+  background-image: url(../img/badge.png);
+}
+.intro {
+  color: white;
+  padding: 0 120px;
+  background-color: black;
+  background-image: url(../img/layer-1-1.png);
+  text-align: center;
+}
+.intro h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 0rem;
+}
+.intro h2 {
+  margin-bottom: 50px;
+}
+.intro .awards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.intro .award {
+  height: 102px;
+  width: 117px;
+  background-repeat: no-repeat;
+  margin: 0px 10px;
+}
+.intro .affiliate {
+  background-image: url(../img/best-affiliate-program.png);
+}
+.intro .mobile {
+  background-image: url(../img/the-best-mobile-app.png);
+}
+.intro .finance {
+  background-image: url(../img/world-finance.png);
+}
+.intro .reg {
+  padding-bottom: 40px;
+}
+.intro .reg input {
+  width: 220px;
+  height: 40px;
+  margin: 3px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 2rem;
+}
+.intro .reg .btn {
+  color: white;
+  background-color: #ff8000;
+  box-shadow: 0 2px 1px 0px #ca3e00;
+}
+.middle {
+  color: white;
+  background-color: #3a4252;
+  padding: 0 120px;
+}
+.summary {
+  padding: 0 120px;
+}

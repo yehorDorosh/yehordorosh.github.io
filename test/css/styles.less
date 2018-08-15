@@ -1,0 +1,93 @@
+@font-face {
+    font-family: myriad;
+    src: url(../font/MyriadPro-SemiboldCondIt.ttf);
+}
+html {
+    font-family: myriad, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    word-wrap: normal;
+}
+//* {border: dashed 0.1px white}
+.bgimg {
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main {
+    //margin: 0 16.5%;
+    @media (max-width: 990px) {
+         margin: 0;
+    }
+}
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    a {display: block; height: 100%;}
+}
+.logo {
+    height: 40px;
+    width: 143px;
+    background-image: url(../img/libertex-logo.png)
+}
+
+.badge {
+    height: 62px;
+    width: 129px;
+    background-image: url(../img/badge.png)
+}
+.intro {
+    color: white;
+    padding: 0 120px;
+    //height: 700px;
+    background-color: black;
+    background-image: url(../img/layer-1-1.png);
+    text-align: center;
+    h1 {text-transform: uppercase;
+        font-size: 5rem;
+        margin-bottom: 0rem;
+    }
+    h2 {margin-bottom: 50px;}
+    .awards {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 120px;
+    }
+    .award {
+        height: 102px;
+        width: 117px;
+        background-repeat: no-repeat;
+        margin: 0px 10px;
+    }
+    .affiliate {background-image: url(../img/best-affiliate-program.png)}
+    .mobile {background-image: url(../img/the-best-mobile-app.png)}
+    .finance {background-image: url(../img/world-finance.png)}
+    .reg {
+        padding-bottom: 40px;
+        input {
+            width: 220px;
+            height: 40px;
+            margin: 3px;
+            border: none;
+            border-radius: 5px;
+            padding: 0 2rem;
+        }
+        .btn {
+            color: white;
+            background-color: #ff8000;
+            box-shadow: 0 2px 1px 0px #ca3e00;
+        }
+    }
+}
+
+.middle {
+    color: white;
+    background-color: #3a4252;
+    padding: 0 120px;
+}
+.summary {
+    padding: 0 120px;
+}
+footer {
+}
