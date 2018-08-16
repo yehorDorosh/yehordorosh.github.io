@@ -70,7 +70,7 @@ header .badge {
 }
 @media (max-width: 760px) {
   .champion h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 .champion h2 {
@@ -151,7 +151,9 @@ header .badge {
 }
 @media (max-width: 760px) {
   .champion .registration-form__field {
-    width: 85%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
 .champion .registration-form__btn {
