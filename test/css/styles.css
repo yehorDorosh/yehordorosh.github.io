@@ -80,13 +80,15 @@ header .badge {
   display: flex;
   justify-content: center;
   margin-bottom: 115px;
+  min-width: 460px;
 }
 .champion .awards__affiliate {
   height: 102px;
   width: 117px;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 20px;
   background-image: url(../img/best-affiliate-program.png);
+  margin: 0 20px;
 }
 @media (max-width: 760px) {
   .champion .awards__affiliate {
@@ -97,8 +99,9 @@ header .badge {
   height: 102px;
   width: 117px;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 20px;
   background-image: url(../img/the-best-mobile-app.png);
+  margin: 0 20px;
 }
 @media (max-width: 760px) {
   .champion .awards__mobile {
@@ -109,7 +112,7 @@ header .badge {
   height: 102px;
   width: 117px;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 20px;
   background-image: url(../img/world-finance.png);
 }
 @media (max-width: 760px) {
@@ -121,6 +124,7 @@ header .badge {
   .champion .awards {
     margin: 20px 0;
     justify-content: space-between;
+    min-width: 0;
   }
 }
 .champion .registration-form {
@@ -152,6 +156,8 @@ header .badge {
   margin: 3px;
   border: none;
   border-radius: 5px;
+  width: 350px;
+  height: 50px;
   color: white;
   background-color: #ff8000;
   box-shadow: 0 2px 1px 0px #ca3e00;
@@ -208,7 +214,8 @@ header .badge {
   border-bottom: solid 2px #121623;
 }
 .table-section .tournament-table tr td:nth-child(1) {
-  width: 9.7%;
+  width: 8%;
+  min-width: 54px;
 }
 .table-section .tournament-table tr td:nth-child(2) {
   width: 40.8%;
@@ -289,9 +296,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='1'] td:first-child {
   background-image: url(../img/table-orange-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='1'] td:last-child {
   background-image: url(../img/flag-ru.png);
@@ -304,9 +311,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='2'] td:first-child {
   background-image: url(../img/table-orange-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='2'] td:last-child {
   background-image: url(../img/flag-sp.png);
@@ -319,9 +326,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='3'] td:first-child {
   background-image: url(../img/table-orange-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='3'] td:last-child {
   background-image: url(../img/flag-ch.png);
@@ -334,9 +341,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='4'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='4'] td:last-child {
   background-image: url(../img/flag-ru.png);
@@ -349,9 +356,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='5'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='5'] td:last-child {
   background-image: url(../img/flag-sp.png);
@@ -364,9 +371,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='6'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='6'] td:last-child {
   background-image: url(../img/flag-ch.png);
@@ -379,9 +386,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='7'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='7'] td:last-child {
   background-image: url(../img/flag-ru.png);
@@ -394,9 +401,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='8'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='8'] td:last-child {
   background-image: url(../img/flag-sp.png);
@@ -409,9 +416,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='9'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='9'] td:last-child {
   background-image: url(../img/flag-ch.png);
@@ -424,9 +431,9 @@ header .badge {
 .table-section .tournament-table tr[data-position='10'] td:first-child {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 .table-section .tournament-table tr[data-position='10'] td:last-child {
   background-image: url(../img/flag-ru.png);
@@ -442,6 +449,8 @@ header .badge {
   margin: 3px;
   border: none;
   border-radius: 5px;
+  width: 350px;
+  height: 50px;
   color: white;
   background-color: #ff8000;
   box-shadow: 0 2px 1px 0px #ca3e00;

@@ -77,7 +77,7 @@ header {
         height: 102px;
         width: 117px;
         background-repeat: no-repeat;
-        margin: 0px 10px;
+        margin: 0px 20px;
         @media (max-width: @width-change-media) {
         margin: 0;
     }
@@ -86,19 +86,26 @@ header {
         display: flex;
         justify-content: center;
         margin-bottom: 115px;
+        min-width: 460px;
         &__affiliate {
             .background-award();
-            background-image: url(../img/best-affiliate-program.png)
+            background-image: url(../img/best-affiliate-program.png);
+            margin: 0 20px;    
         }
         &__mobile {
             .background-award();
-            background-image: url(../img/the-best-mobile-app.png)
+            background-image: url(../img/the-best-mobile-app.png);
+            margin: 0 20px;
         }
         &__finance {
             .background-award();
-            background-image: url(../img/world-finance.png)
+            background-image: url(../img/world-finance.png);
         }
-        @media (max-width: @width-change-media) {margin: 20px 0; justify-content: space-between;}
+        @media (max-width: @width-change-media) {
+            margin: 20px 0;
+            justify-content: space-between;
+            min-width: 0;
+        }
     }
     
     .registration-form {
@@ -117,6 +124,8 @@ header {
         &__btn {
             margin-top: 20px;
             .input-size();
+            width: 350px;
+            height: 50px;
             color: white;
             background-color: #ff8000;
             box-shadow: 0 2px 1px 0px #ca3e00;
@@ -157,7 +166,7 @@ header {
         td {
             border-bottom: solid 2px #121623;
         }
-        tr td:nth-child(1){width: 9.7%;}
+        tr td:nth-child(1){width: 8%; min-width: 54px;}
         tr td:nth-child(2){width: 40.8%;}
         tr td:nth-child(3){width: 39.0%;}
         tr td:nth-child(4){width: 10.3%;}
@@ -175,6 +184,7 @@ header {
             border-bottom-right-radius: 5px;
             font-size: 0;
         }
+        
         tr:first-child {
             color: #626e86;
             text-transform: uppercase;
@@ -209,10 +219,16 @@ header {
                 background: none;
             }
         }
+        .background-image-col1() {
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
         tr[data-position='1'] {
             td:first-child {
                 background-image: url(../img/table-orange-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ru.png);
@@ -223,7 +239,7 @@ header {
         tr[data-position='2'] {
             td:first-child {
                 background-image: url(../img/table-orange-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-sp.png);
@@ -234,7 +250,7 @@ header {
         tr[data-position='3'] {
             td:first-child {
                 background-image: url(../img/table-orange-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ch.png);
@@ -245,7 +261,7 @@ header {
         tr[data-position='4'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ru.png);
@@ -256,7 +272,7 @@ header {
         tr[data-position='5'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-sp.png);
@@ -267,7 +283,7 @@ header {
         tr[data-position='6'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ch.png);
@@ -278,7 +294,7 @@ header {
         tr[data-position='7'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ru.png);
@@ -289,7 +305,7 @@ header {
         tr[data-position='8'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-sp.png);
@@ -300,7 +316,7 @@ header {
         tr[data-position='9'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ch.png);
@@ -311,7 +327,7 @@ header {
         tr[data-position='10'] {
             td:first-child {
                 background-image: url(../img/table-gray-row-marker.png);
-                .background-image();
+                .background-image-col1();
             }
             td:last-child {
                 background-image: url(../img/flag-ru.png);
@@ -322,12 +338,16 @@ header {
     }
     .btn {
             .input-size();
+            width: 350px;
+            height: 50px;
             color: white;
             background-color: #ff8000;
             box-shadow: 0 2px 1px 0px #ca3e00;
             @media (max-width: @width-change-media) {margin-top: 0px;}
         }
 }
+
+
 .summary {
     padding: 0 25%;
     @media (max-width: @width-change-media) {padding: 0;}
