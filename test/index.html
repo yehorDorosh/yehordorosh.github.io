@@ -3,98 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Libertex Стань чемпионом лиги!</title>
-    <meta name="viewport" content="width=divice-width, initial-scale=1.1", user-scalable=no />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+    <header>
+    <div class="logo"> <a href="#"></a> </div>
+    <div class="badge"> <a href="#"></a> </div>
+    </header>
     <main>
-        <section class="intro bgimg">
-           <header>
-               <div class="logo bgimg"> <a href="#"></a> </div>
-               <div class="badge bgimg"> <a href="#"></a> </div>
-            </header>
+        <section class="champion">
+            
             <h1>стань чемпионом лиги</h1>
-            <h2>Вместе с Хамесом нашим Родригесом</h3>
+            <h2>Вместе с Хамесом нашим Родригесом</h2>
             <div class="awards">
-                <div class="affiliate award"></div>
-                <div class="mobile award"></div>
-                <div class="finance award"></div>
+                <div class="awards__affiliate"></div>
+                <div class="awards__mobile"></div>
+                <div class="awards__finance"></div>
             </div>
-            <form class="reg">
-                <input type="text" class="field" name="name" placeholder="Имя" />
-                <input type="text" class="field" name="surname" placeholder="Фамилия" />
-                <br/>
-                <input type="tel" class="field" name="tel" placeholder="+382"/>
-                <input type="email" class="field" name="email" placeholder="Эл. почта"/>
-                <br/>
-                <input type="submit" class="btn" name="submit" value="Порвать всех!" />
+            <form class="registration-form">
+                <input type="text" class="registration-form__field" name="name" placeholder="Имя" />
+                <input type="text" class="registration-form__field" name="surname" placeholder="Фамилия" />
+                <input type="tel" class="registration-form__field" name="tel" placeholder="+382"/>
+                <input type="email" class="registration-form__field" name="email" placeholder="Эл. почта"/>
+                <input type="submit" class="registration-form__btn" name="submit" value="Порвать всех!" />
             </form>
         </section>
-        <section class="middle">
-            <table>
-                <caption>турнирная таблица</caption>
+        <section class="table-section">
+            <h2>турнирная таблица</h2>
+            <div class="plate">
+            <table class="tournament-table">
                 <tr>
                     <td>#</td>
                     <td>объём депозита</td>
                     <td>номер счёта</td>
                     <td>страна</td>
                 </tr>
-                <tr>
+                <tr data-position="1">
                     <td>1</td>
                     <td>$5321</td>
                     <td>123456000</td>
                     <td>ru</td>
                 </tr>
-                <tr>
+                <tr data-position="2">
                     <td>2</td>
                     <td>$3000</td>
                     <td>425238238</td>
                     <td>spain</td>
                 </tr>
-                <tr>
+                <tr data-position="3">
                     <td>3</td>
                     <td>$890</td>
                     <td>123543548</td>
                     <td>china</td>
                 </tr>
-                <tr>
+                <tr data-position="4">
                     <td>4</td>
                     <td>$777</td>
                     <td>090235453</td>
                     <td>ru</td>
                 </tr>
-                <tr>
+                <tr data-position="5">
                     <td>5</td>
                     <td>$666</td>
                     <td>009281443</td>
                     <td>spain</td>
                 </tr>
-                <tr>
+                <tr data-position="6">
                     <td>6</td>
                     <td>$555</td>
                     <td>515654522</td>
                     <td>china</td>
                 </tr>
-                <tr>
+                <tr data-position="7">
                     <td>7</td>
                     <td>$444</td>
                     <td>765452241</td>
                     <td>ru</td>
                 </tr>
-                <tr>
+                <tr data-position="8">
                     <td>8</td>
                     <td>$333</td>
                     <td>562183816</td>
                     <td>spain</td>
                 </tr>
-                <tr>
+                <tr data-position="9">
                     <td>9</td>
                     <td>$222</td>
                     <td>642452555</td>
                     <td>china</td>
                 </tr>
-                <tr>
+                <tr data-position="10">
                     <td>10</td>
                     <td>$111</td>
                     <td>212552112</td>
@@ -104,13 +104,16 @@
             <form>
                 <input type="button" class="btn" value="Порвать всех!"/>
             </form>
+            </div>
         </section>
         <section class="summary">
             <h2>а судьи кто?</h2>
             <div class="summ-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
-            <iframe width="590" height="315" src="https://www.youtube.com/embed/RopvPNiPiT0"></iframe>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RopvPNiPiT0" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
     <footer>
