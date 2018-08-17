@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6" async="async"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js" async="async"></script>
 </head>
 <body>
     <header>
@@ -17,7 +19,7 @@
         <section class="champion">
             
             <h1>стань чемпионом лиги</h1>
-            <h2>Вместе с Хамесом нашим Родригесом</h2>
+            <h3>Вместе с Хамесом нашим Родригесом</h3>
             <div class="awards">
                 <div class="awards--award awards__affiliate"></div>
                 <div class="awards--award awards__mobile"></div>
@@ -37,72 +39,76 @@
             <h2>турнирная таблица</h2>
             <div class="plate">
             <table class="tournament-table">
+               <thead>
                 <tr>
-                    <td>#</td>
-                    <td>объём депозита</td>
-                    <td>номер счёта</td>
-                    <td>страна</td>
+                    <th>#</th>
+                    <th>объём депозита</th>
+                    <th>номер счёта</th>
+                    <th>страна</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr data-position="1">
-                    <td>1</td>
+                    <td class="ogange-rectangle">1</td>
                     <td>$5321</td>
                     <td>123456000</td>
-                    <td>ru</td>
+                    <td><span class="ru">ru</span></td>
                 </tr>
                 <tr data-position="2">
-                    <td>2</td>
+                    <td class="ogange-rectangle">2</td>
                     <td>$3000</td>
                     <td>425238238</td>
-                    <td>spain</td>
+                    <td><span class="spain">spain</span></td>
                 </tr>
                 <tr data-position="3">
-                    <td>3</td>
+                    <td class="ogange-rectangle">3</td>
                     <td>$890</td>
                     <td>123543548</td>
-                    <td>china</td>
+                    <td><span class="china">china</span></td>
                 </tr>
                 <tr data-position="4">
-                    <td>4</td>
+                    <td class="gray-rectangle">4</td>
                     <td>$777</td>
                     <td>090235453</td>
-                    <td>ru</td>
+                    <td><span class="ru">ru</span></td>
                 </tr>
                 <tr data-position="5">
-                    <td>5</td>
+                    <td class="gray-rectangle">5</td>
                     <td>$666</td>
                     <td>009281443</td>
-                    <td>spain</td>
+                    <td><span class="spain">spain</span></td>
                 </tr>
                 <tr data-position="6">
-                    <td>6</td>
+                    <td class="gray-rectangle">6</td>
                     <td>$555</td>
                     <td>515654522</td>
-                    <td>china</td>
+                    <td><span class="china">china</span></td>
                 </tr>
                 <tr data-position="7">
-                    <td>7</td>
+                    <td class="gray-rectangle">7</td>
                     <td>$444</td>
                     <td>765452241</td>
-                    <td>ru</td>
+                    <td><span class="ru">ru</span></td>
                 </tr>
                 <tr data-position="8">
-                    <td>8</td>
+                    <td class="gray-rectangle">8</td>
                     <td>$333</td>
                     <td>562183816</td>
-                    <td>spain</td>
+                    <td><span class="spain">spain</span></td>
                 </tr>
                 <tr data-position="9">
-                    <td>9</td>
+                    <td class="gray-rectangle">9</td>
                     <td>$222</td>
                     <td>642452555</td>
-                    <td>china</td>
+                    <td><span class="china">china</span></td>
                 </tr>
                 <tr data-position="10">
-                    <td>10</td>
+                    <td class="gray-rectangle">10</td>
                     <td>$111</td>
                     <td>212552112</td>
-                    <td>ru</td>
+                    <td><span class="ru">ru</span></td>
                 </tr>
+                </tbody>
             </table>
             <form>
                 <input type="button" class="btn" value="Порвать всех!"/>
@@ -113,7 +119,7 @@
         <div class="background-section-summary">
         <section class="summary">
             <h2>а судьи кто?</h2>
-            <div class="summ-text">
+            <div class="summary-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             <div class="video">
@@ -123,25 +129,30 @@
         </div>
     </main>
     <footer>
-        <div>
-            © 1997–2017, Forex Club LTD <br/><br/>The Financial Services Centre, P.O. Box 1823, Stoney Ground, Kingstown, VC0100, St. Vincent & the Grenadines.
+        <div class="footer-adress">
+            © 1997–2017, Forex Club LTD <br/><br/>The Financial Services Centre, P.O. Box 1823, Stoney Ground,<br/> Kingstown, VC0100, St. Vincent & the Grenadines.
         </div>
-        <div>Соц сети</div>
-        <div>Условия перепечатки материалов    Политика безопасности</div>
+        <div class="social-net">
+            <div class="twitter-btn-box">
+            <a class="twitter-follow-button" href="https://twitter.com/libertex_europe" data-show-count="false">Follow @libertex_europe</a>
+            </div>
+            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/Libertex.EU/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+        </div>
+        <div class="security-policy"><span>Условия перепечатки материалов</span> <span>Политика безопасности</span></div>
         <div class="payment">
            <span>Более 25 удобных способов пополнения и снятия:</span>
-            <div class="money-service">
-                <div class="webmoney"></div>
-                <div class="visa"></div>
-                <div class="skriil"></div>
-                <div class="ya"></div>
-                <div class="mastercard"></div>
-                <div class="qvisa"></div>
+            <div class="money">
+                <div class="money__service money--webmoney"><a href="#"></a></div>
+                <div class="money__service money--visa"><a href="#"></a></div>
+                <div class="money__service money--skriil"><a href="#"></a></div>
+                <div class="money__service money--ya"><a href="#"></a></div>
+                <div class="money__service money--mastercard"><a href="#"></a></div>
+                <div class="money__service money--qvisa"><a href="#"></a></div>
             </div>
         </div>
-        <div>
-            <div class="mcafee"></div>
-            <div class="lock"> Защищено SSL</div>
+        <div class="secure">
+            <div class="secure__item secure--mcafee"></div>
+            <div class="secure__item secure--lock"></div> Защищено SSL
         </div>
     </footer>
 </body>

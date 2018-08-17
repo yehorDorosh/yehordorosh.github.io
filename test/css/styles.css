@@ -50,7 +50,7 @@ html {
 h1 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 @media (max-width: 760px) {
   h1 {
@@ -59,7 +59,7 @@ h1 {
 }
 h2 {
   margin: 0;
-  font-size: 1rem;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 @media (max-width: 760px) {
@@ -189,8 +189,10 @@ h2 {
   }
 }
 .table-section {
+  width: 600px;
+  margin: 0 auto;
   color: white;
-  padding: 35px 300px;
+  padding: 40px 0;
   text-align: center;
 }
 @media (max-width: 760px) {
@@ -200,258 +202,118 @@ h2 {
   }
 }
 .table-section .plate {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #121623;
-  background-clip: padding-box;
   width: 100%;
   height: 525px;
-  padding: 0 20px 50px 20px;
+  background-color: #121623;
+  background-clip: padding-box;
+  padding: 0 10px 50px 10px;
   border-radius: 5px;
 }
 .table-section .tournament-table {
   width: 100%;
   height: 100%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   border-collapse: collapse;
   background-color: transparent;
-  margin-bottom: 20px;
 }
 .table-section .tournament-table td {
   border-bottom: solid 2px #121623;
 }
-.table-section .tournament-table tr td:nth-child(1) {
+.table-section .tournament-table th:nth-child(1) {
   width: 8%;
   min-width: 54px;
 }
-.table-section .tournament-table tr td:nth-child(2) {
+.table-section .tournament-table th:nth-child(2) {
   width: 40.8%;
 }
-.table-section .tournament-table tr td:nth-child(3) {
+.table-section .tournament-table th:nth-child(3) {
   width: 39%;
 }
-.table-section .tournament-table tr td:nth-child(4) {
+.table-section .tournament-table th:nth-child(4) {
   width: 10.3%;
 }
-.table-section .tournament-table tr:not(:first-child) {
+.table-section .tournament-table tbody tr {
   background-image: url(../img/1px-row-line.png);
   background-size: contain;
 }
-.table-section .tournament-table tr:not(:first-child) td:first-child {
+.table-section .tournament-table tbody tr td:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.table-section .tournament-table tr:not(:first-child) td:last-child {
+.table-section .tournament-table tbody tr td:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  font-size: 0;
+  font-size: 0rem;
 }
-.table-section .tournament-table tr:first-child {
+.table-section .tournament-table thead {
   color: #626e86;
   text-transform: uppercase;
 }
-.table-section .tournament-table tr:first-child td:nth-child(1) {
+.table-section .tournament-table thead th:first-child::after {
+  display: inline-block;
+  width: 10px;
+  height: 13px;
+  margin-left: 5px;
+  content: '';
   background-image: url(../img/arrow-sort.png);
   background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 10px 13px;
-  background-position-x: 80%;
-  overflow-x: visible;
 }
-.table-section .tournament-table tr:first-child td:nth-child(2) {
-  background-image: url(../img/arrow-sort.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 13px;
-  background-position-x: 70%;
-  background: none;
-}
-@media (max-width: 760px) {
-  .table-section .tournament-table tr:first-child td:nth-child(2) {
-    background-position-x: 90%;
-  }
-}
-.table-section .tournament-table tr:first-child td:nth-child(3) {
-  background-image: url(../img/arrow-sort.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 13px;
-  background-position-x: 65%;
-  background: none;
-}
-@media (max-width: 760px) {
-  .table-section .tournament-table tr:first-child td:nth-child(3) {
-    background-position-x: 80%;
-  }
-}
-.table-section .tournament-table tr:first-child td:nth-child(4) {
-  background-image: url(../img/arrow-sort.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 13px;
-  background-position-x: 100%;
-  background: none;
-}
-.table-section .tournament-table tr[data-position='1'] td:first-child {
-  background-image: url(../img/table-orange-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='1'] td:last-child {
+.table-section .tournament-table .ru {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
   background-image: url(../img/flag-ru.png);
   background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px 11px;
 }
-.table-section .tournament-table tr[data-position='2'] td:first-child {
-  background-image: url(../img/table-orange-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='2'] td:last-child {
+.table-section .tournament-table .spain {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
   background-image: url(../img/flag-sp.png);
   background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px 11px;
 }
-.table-section .tournament-table tr[data-position='3'] td:first-child {
+.table-section .tournament-table .china {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
+  background-image: url(../img/flag-ch.png);
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.table-section .tournament-table .ogange-rectangle {
   background-image: url(../img/table-orange-row-marker.png);
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top;
 }
-.table-section .tournament-table tr[data-position='3'] td:last-child {
-  background-image: url(../img/flag-ch.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='4'] td:first-child {
+.table-section .tournament-table .gray-rectangle {
   background-image: url(../img/table-gray-row-marker.png);
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top;
 }
-.table-section .tournament-table tr[data-position='4'] td:last-child {
-  background-image: url(../img/flag-ru.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
+.summary {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px 0;
 }
-.table-section .tournament-table tr[data-position='5'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+.summary h2 {
+  text-align: center;
 }
-.table-section .tournament-table tr[data-position='5'] td:last-child {
-  background-image: url(../img/flag-sp.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='6'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='6'] td:last-child {
-  background-image: url(../img/flag-ch.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='7'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='7'] td:last-child {
-  background-image: url(../img/flag-ru.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='8'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='8'] td:last-child {
-  background-image: url(../img/flag-sp.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='9'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='9'] td:last-child {
-  background-image: url(../img/flag-ch.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
-}
-.table-section .tournament-table tr[data-position='10'] td:first-child {
-  background-image: url(../img/table-gray-row-marker.png);
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-.table-section .tournament-table tr[data-position='10'] td:last-child {
-  background-image: url(../img/flag-ru.png);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px 11px;
+.summary .summary-text {
+  padding-bottom: 30px;
 }
 @media (max-width: 760px) {
   .summary {
@@ -461,23 +323,128 @@ h2 {
 }
 .summary .video {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   padding-bottom: 56.25%;
   /*для 16:9 (если 4:3 — 75%) */
   padding-top: 30px;
   height: 0;
   overflow: hidden;
 }
-.summary .video iframe {
+.summary iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+footer {
+  background-color: #f6f8fa;
+  padding-top: 32px;
+  padding-bottom: 58px;
+}
 @media (max-width: 760px) {
   footer {
     padding: 0;
   }
+}
+footer .footer-adress {
+  text-align: center;
+}
+footer .social-net {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+footer .security-policy {
+  text-align: center;
+  color: #ff8000;
+  padding-bottom: 35px;
+}
+footer .security-policy span {
+  margin: 0 10px;
+}
+footer .payment {
+  width: 600px;
+  margin: 0 auto;
+  border-top: dotted 1px;
+  border-bottom: dotted 1px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  footer .payment {
+    width: auto;
+  }
+}
+footer .money {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 760px) {
+  footer .money {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer .money__service {
+  margin-top: 30px;
+  height: 33px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/payment-sys-sprite.png);
+}
+footer .money a {
+  display: block;
+  height: 100%;
+}
+footer .money--webmoney {
+  background-position-x: 0px;
+  width: 100px;
+}
+footer .money--visa {
+  background-position-x: -110px;
+  width: 50px;
+}
+footer .money--skriil {
+  background-position-x: -175px;
+  width: 60px;
+}
+footer .money--ya {
+  background-position-x: -240px;
+  width: 80px;
+}
+footer .money--mastercard {
+  background-position-x: -340px;
+  width: 50px;
+}
+footer .money--qvisa {
+  background-position-x: -400px;
+  width: 80px;
+}
+footer .secure {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+footer .secure__item {
+  margin-left: 30px;
+  margin-right: 5px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+footer .secure--mcafee {
+  width: 63px;
+  height: 30px;
+  background-image: url(../img/mcafee.png);
+}
+footer .secure--lock {
+  width: 18px;
+  height: 20px;
+  background-image: url(../img/ssl.png);
 }
