@@ -1,7 +1,7 @@
 
 body {
     width: 100%;
-    min-width: 375px;
+    min-width: 320px;
 }
 
 header {
@@ -89,7 +89,7 @@ h3 {
 }
 
 .btn {
-    //margin: 3px;
+    margin: 3px;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
@@ -101,6 +101,7 @@ h3 {
     box-shadow: 0 2px 1px 0px #ca3e00;
     @media (max-width: @width-change-media) {
         margin-top: 30px;
+        width: 100%;
     }
 }
 
@@ -386,12 +387,16 @@ footer {
         justify-content: space-around;
         @media (max-width: @width-change-media) {
             flex-wrap: wrap;
+            justify-content: center;
         }
         &__service {
             margin-top: 30px;
             height: 33px;
             .background-image();
             background-image: url(../img/payment-sys-sprite.png);
+            @media (max-width: @width-change-media) {
+                margin: 0 5px;
+            }
         }
         a {
             display: block;

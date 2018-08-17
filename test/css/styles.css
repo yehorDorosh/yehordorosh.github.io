@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  min-width: 375px;
+  min-width: 320px;
 }
 header {
   height: 0;
@@ -75,6 +75,7 @@ h3 {
   font-weight: normal;
 }
 .btn {
+  margin: 3px;
   margin-top: 20px;
   border: none;
   border-radius: 5px;
@@ -88,6 +89,7 @@ h3 {
 @media (max-width: 760px) {
   .btn {
     margin-top: 30px;
+    width: 100%;
   }
 }
 .background-section-champion {
@@ -404,6 +406,7 @@ footer .money {
 @media (max-width: 760px) {
   footer .money {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 footer .money__service {
@@ -414,6 +417,11 @@ footer .money__service {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../img/payment-sys-sprite.png);
+}
+@media (max-width: 760px) {
+  footer .money__service {
+    margin: 0 5px;
+  }
 }
 footer .money a {
   display: block;
