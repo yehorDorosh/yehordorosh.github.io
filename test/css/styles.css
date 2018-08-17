@@ -44,13 +44,13 @@ header .badge {
 }
 html {
   font-family: Myriad, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   word-wrap: normal;
 }
 h1 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3.9rem;
 }
 @media (max-width: 760px) {
   h1 {
@@ -61,11 +61,18 @@ h2 {
   margin: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 @media (max-width: 760px) {
   h2 {
     margin: 0;
+    font-size: 1rem;
   }
+}
+h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: normal;
 }
 .btn {
   margin-top: 20px;
@@ -73,7 +80,7 @@ h2 {
   border-radius: 5px;
   width: 350px;
   height: 50px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
   background-color: #ff8000;
   box-shadow: 0 2px 1px 0px #ca3e00;
@@ -257,6 +264,9 @@ h2 {
   color: #626e86;
   text-transform: uppercase;
 }
+.table-section .tournament-table thead th {
+  line-height: 50px;
+}
 .table-section .tournament-table thead th:first-child::after {
   display: inline-block;
   width: 10px;
@@ -317,6 +327,8 @@ h2 {
   width: 600px;
   margin: 0 auto;
   padding: 50px 0;
+  color: #373737;
+  font-size: 0.8rem;
 }
 .summary h2 {
   text-align: center;
@@ -346,6 +358,7 @@ h2 {
 }
 footer {
   background-color: #f6f8fa;
+  font-size: 0.7rem;
   padding-top: 32px;
   padding-bottom: 58px;
 }
@@ -390,8 +403,7 @@ footer .money {
 }
 @media (max-width: 760px) {
   footer .money {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
   }
 }
 footer .money__service {
