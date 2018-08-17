@@ -6,7 +6,8 @@ header {
   height: 0;
   position: relative;
   top: 20px;
-  padding: 0 10%;
+  padding: 0 20%;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
@@ -91,6 +92,12 @@ h2 {
   background-size: auto;
   background-color: black;
   background-clip: padding-box;
+}
+@media (max-width: 760px) {
+  .background-section-champion {
+    background-image: url(../img/background-football-mobile.png);
+    background-size: cover;
+  }
 }
 .background-section-table {
   background-color: #3a4252;
