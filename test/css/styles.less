@@ -1,3 +1,4 @@
+//* {border: dashed 0.5px;}
 body {
     width: 100%;
     min-width: 375px;
@@ -109,7 +110,7 @@ h3 {}
     padding-bottom: 45px;
     color: white;
     text-align: center;
-    @media (max-width: @width-change-media) {padding: 100px 0 0 0; width: auto;}
+    @media (max-width: @width-change-media) {padding: 100px 13px 20px 13px; width: auto;}
     .awards {
         display: flex;
         justify-content: center;
@@ -178,7 +179,10 @@ h3 {}
     text-align: center;
     @media (max-width: @width-change-media) {
         width: auto;
-        padding: 35px 0;
+        padding:3px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
         width: auto;
     }
     .plate {
@@ -187,7 +191,9 @@ h3 {}
         background-color: #121623;
         background-clip: padding-box;
         padding: 0 10px 50px 10px;
+        box-sizing: border-box;
         border-radius: 5px;
+        @media (max-width: @width-change-media) {margin-top: 10px;}
         }
     .tournament-table {
         width: 100%;
@@ -276,10 +282,10 @@ h3 {}
     .summary-text {
         padding-bottom: 30px;
     }
-    @media (max-width: @width-change-media) {padding: 0; width: auto;}
+    @media (max-width: @width-change-media) {padding: 25px 3px; width: auto;}
     .video {
         position: relative;
-        padding-bottom: 56.25%; /*для 16:9 (если 4:3 — 75%) */
+        padding-bottom: 56.25%;
         padding-top: 30px;
         height: 0;
         overflow: hidden;
@@ -298,7 +304,7 @@ footer {
     background-color: #f6f8fa;
     padding-top: 32px;
     padding-bottom: 58px;
-    @media (max-width: @width-change-media) {padding: 0;}
+    @media (max-width: @width-change-media) {padding: 20px 3px;}
     .footer-adress {text-align: center; }
     .social-net {
         display: flex;

@@ -117,7 +117,7 @@ h2 {
 }
 @media (max-width: 760px) {
   .champion {
-    padding: 100px 0 0 0;
+    padding: 100px 13px 20px 13px;
     width: auto;
   }
 }
@@ -197,7 +197,10 @@ h2 {
 }
 @media (max-width: 760px) {
   .table-section {
-    padding: 35px 0;
+    padding: 3px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
     width: auto;
   }
 }
@@ -207,7 +210,13 @@ h2 {
   background-color: #121623;
   background-clip: padding-box;
   padding: 0 10px 50px 10px;
+  box-sizing: border-box;
   border-radius: 5px;
+}
+@media (max-width: 760px) {
+  .table-section .plate {
+    margin-top: 10px;
+  }
 }
 .table-section .tournament-table {
   width: 100%;
@@ -317,14 +326,13 @@ h2 {
 }
 @media (max-width: 760px) {
   .summary {
-    padding: 0;
+    padding: 25px 3px;
     width: auto;
   }
 }
 .summary .video {
   position: relative;
   padding-bottom: 56.25%;
-  /*для 16:9 (если 4:3 — 75%) */
   padding-top: 30px;
   height: 0;
   overflow: hidden;
@@ -343,7 +351,7 @@ footer {
 }
 @media (max-width: 760px) {
   footer {
-    padding: 0;
+    padding: 20px 3px;
   }
 }
 footer .footer-adress {
