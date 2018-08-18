@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
     <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6" async="async"></script>
     <script type="text/javascript" src="https://platform.twitter.com/widgets.js" async="async"></script>
+
 </head>
 
 <body>
@@ -27,11 +29,11 @@
                     <div class="awards--award awards__mobile"></div>
                     <div class="awards--award awards__finance"></div>
                 </div>
-                <form class="registration-form">
-                    <input type="text" class="registration-form__field" name="name" placeholder="Имя" />
-                    <input type="text" class="registration-form__field" name="surname" placeholder="Фамилия" />
-                    <input type="tel" class="registration-form__field" name="tel" placeholder="+382" />
-                    <input type="email" class="registration-form__field" name="email" placeholder="Эл. почта" />
+                <form class="registration-form" name="registration">
+                    <input type="text" class="registration-form__field" name="name" placeholder="Имя" data-tooltip="Обязательно для заполнения, не должно содержать числа" />
+                    <input type="text" class="registration-form__field" name="surname" placeholder="Фамилия" data-tooltip="Обязательно для заполнения, не должно содержать числа" />
+                    <input type="tel" class="registration-form__field" name="tel" placeholder="+382" data-tooltip="Обязательно для заполнения, может содержать 0-9()+-" />
+                    <input type="email" class="registration-form__field" name="email" placeholder="Эл. почта" data-tooltip="должно содержать @" />
                     <input type="submit" class="btn" name="submit" value="Порвать всех!" />
                 </form>
             </section>
@@ -124,11 +126,11 @@
                 <div class="summary-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
-<!--
+
                 <div class="video">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/RopvPNiPiT0" frameborder="0" allowfullscreen></iframe>
                 </div>
--->
+
             </section>
         </div>
     </main>
@@ -159,6 +161,7 @@
             <div class="secure__item secure--lock"></div> Защищено SSL
         </div>
     </footer>
+    <script type="text/javascript" src="js/validation.js" defer></script>
 </body>
 
 </html>
