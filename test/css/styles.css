@@ -33,7 +33,7 @@ header .badge {
   width: 129px;
   background-image: url(../img/badge.png);
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   header {
     padding: 0;
   }
@@ -52,7 +52,7 @@ h1 {
   text-transform: uppercase;
   font-size: 3.9rem;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 2rem;
   }
@@ -63,7 +63,7 @@ h2 {
   text-transform: uppercase;
   font-size: 2rem;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   h2 {
     margin: 0;
     font-size: 1rem;
@@ -74,21 +74,39 @@ h3 {
   margin: 0;
   font-weight: normal;
 }
-.tooltip {
+.message {
+  width: 200px;
+  height: 50px;
+  transform: translateX(-50%);
   position: fixed;
   padding: 10px 20px;
-  /* красивости... */
-  border: 1px solid #b3c9ce;
+  border: 1px solid gray;
   border-radius: 4px;
   text-align: center;
-  font: italic 9px arial, sans-serif;
-  color: #333;
-  background: #FFFF73;
+  background: white;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
+:lang(ru) .message:before {
+  content: 'Регистарция прошла успешно';
+}
+.ok-btn {
+  width: 20px;
+  height: 10px;
+  z-index: 1;
+  transform: translateX(-50%);
+  position: fixed;
+  padding: 10px 10px;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  text-align: center;
+  background: gray;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.ok-btn:hover {
+  cursor: pointer;
+}
 body .champion .error {
-  border: solid red;
-  background-color: #FF8073;
+  border: solid 1px red;
 }
 .btn {
   margin: 3px;
@@ -102,8 +120,35 @@ body .champion .error {
   background-color: #ff8000;
   box-shadow: 0 2px 1px 0px #ca3e00;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .btn {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+.btn:hover {
+  color: #ff8000;
+  background-color: white;
+  box-shadow: 0 2px 1px 0px #ff8000;
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow: none;
+}
+.btn-disabled {
+  margin: 3px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: gray;
+  box-shadow: 0 2px 1px 0px gray;
+}
+@media (max-width: 600px) {
+  .btn-disabled {
     margin-top: 30px;
     width: 100%;
   }
@@ -118,7 +163,7 @@ body .champion .error {
   background-color: black;
   background-clip: padding-box;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .background-section-champion {
     background-image: url(../img/background-football-mobile.png);
     background-size: cover;
@@ -140,7 +185,7 @@ body .champion .error {
   color: white;
   text-align: center;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .champion {
     padding: 100px 13px 20px 13px;
     width: auto;
@@ -158,7 +203,7 @@ body .champion .error {
   background-repeat: no-repeat;
   margin: 0px 20px;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .champion .awards--award {
     padding: 0 10px;
     box-sizing: border-box;
@@ -174,7 +219,7 @@ body .champion .error {
 .champion .awards__finance {
   background-image: url(../img/world-finance.png);
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .champion .awards {
     margin: 20px 0;
     justify-content: center;
@@ -199,14 +244,14 @@ body .champion .error {
   padding: 0 1rem;
   box-sizing: border-box;
 }
-@media (max-width: 760px) {
+@media (max-width: 417px) {
   .champion .registration-form__field {
     width: 100%;
     margin: 3px 0;
     box-sizing: border-box;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .champion .registration-form {
     width: 100%;
     height: auto;
@@ -220,7 +265,7 @@ body .champion .error {
   padding: 40px 0;
   text-align: center;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .table-section {
     padding: 3px;
     padding-top: 20px;
@@ -238,7 +283,7 @@ body .champion .error {
   box-sizing: border-box;
   border-radius: 5px;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .table-section .plate {
     margin-top: 10px;
   }
@@ -354,7 +399,7 @@ body .champion .error {
 .summary .summary-text {
   padding-bottom: 30px;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .summary {
     padding: 25px 3px;
     width: auto;
@@ -380,7 +425,7 @@ footer {
   padding-top: 32px;
   padding-bottom: 58px;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   footer {
     padding: 20px 3px;
   }
@@ -410,7 +455,7 @@ footer .payment {
   padding-bottom: 45px;
   text-align: center;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   footer .payment {
     width: auto;
   }
@@ -419,7 +464,7 @@ footer .money {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   footer .money {
     flex-wrap: wrap;
     justify-content: center;
@@ -434,7 +479,7 @@ footer .money__service {
   background-position: center;
   background-image: url(../img/payment-sys-sprite.png);
 }
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   footer .money__service {
     margin: 0 5px;
   }

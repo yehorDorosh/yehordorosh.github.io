@@ -33,7 +33,7 @@ header {
     }
 }
 
-@width-change-media: 760px;
+@width-change-media: 600px;
 @font-face {
     font-family: Myriad;
     src: url(../font/MyriadPro-SemiboldCondIt.ttf);
@@ -71,19 +71,38 @@ h3 {
     font-weight: normal;
 }
 
-.tooltip {
+.message {
+    width: 200px;
+    height: 50px;
+    transform: translateX(-50%);
       position: fixed;
       padding: 10px 20px;
-      /* красивости... */
-
-      border: 1px solid #b3c9ce;
+      border: 1px solid gray;
       border-radius: 4px;
       text-align: center;
-      font: italic 9px arial, sans-serif;
-      color: #333;
-      background: #FFFF73;
+      background: white;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
     }
+:lang(ru) .message:before {
+    content: 'Регистарция прошла успешно'
+}
+.ok-btn {
+    width: 20px;
+    height: 10px;
+    z-index: 1;
+    transform: translateX(-50%);
+      position: fixed;
+      padding: 10px 10px;
+      border: 0.5px solid black;
+      border-radius: 4px;
+      text-align: center;
+      background: gray;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+.ok-btn:hover {
+    cursor: pointer;
+}
+
 
 //default option for background image in blocks
 .background-image() {
@@ -103,8 +122,7 @@ h3 {
 }
 
 body .champion .error {
-    border: solid red;
-    background-color: #FF8073;
+    border: solid 1px red;
 }
 
 .btn {
@@ -118,6 +136,32 @@ body .champion .error {
     color: white;
     background-color: #ff8000;
     box-shadow: 0 2px 1px 0px #ca3e00;
+    @media (max-width: @width-change-media) {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+.btn:hover {
+    color: #ff8000;
+    background-color: white;
+    box-shadow: 0 2px 1px 0px #ff8000;
+    cursor: pointer;
+}
+.btn:active {
+    box-shadow: none;
+}
+.btn-disabled {
+    margin: 3px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: gray;
+    box-shadow: 0 2px 1px 0px gray;
     @media (max-width: @width-change-media) {
         margin-top: 30px;
         width: 100%;
@@ -199,13 +243,12 @@ body .champion .error {
             .input-size();
             padding: 0 1rem;
             box-sizing: border-box;
-            @media (max-width: @width-change-media) {
+            @media (max-width: 417px) {
                 width: 100%;
                 margin: 3px 0;
                 box-sizing: border-box;
             }
         }
-
         @media (max-width: @width-change-media) {
             width: 100%;
             height: auto;
