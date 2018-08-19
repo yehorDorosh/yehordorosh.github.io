@@ -64,7 +64,7 @@ function validate(form) {
             if (elems[key].isValid == false) return false;
         }
     }
-    return false;
+    return true;
 }
 //-------------------------------------- promise
 
