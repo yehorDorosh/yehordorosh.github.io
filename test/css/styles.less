@@ -140,6 +140,14 @@ body .champion .error {
         width: 100%;
     }
 }
+a.btn {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 
 .btn:hover {
     color: #ff8000;
@@ -304,16 +312,14 @@ body .champion .error {
             min-width: 54px;
         }
         th:nth-child(2) {
-            width: 45.8%;
+            width: 40.8%;
         }
         th:nth-child(3) {
             width: 29.0%;
         }
         th:nth-child(4) {
-            width: 15.3%;
+            width: 20.3%;
         }
-
-
 
         tbody tr {
             background-image: url(../img/1px-row-line.png);
@@ -338,14 +344,14 @@ body .champion .error {
             th:hover {
                 cursor: pointer
             }
-            @media (max-width: @width-change-media) {
+            @media (max-width: 480px) {
                 font-size: 0.7rem
             }
             .sort-up:after {
                 display: inline-block;
                 width: 10px;
                 height: 13px;
-                margin-left: 5px;
+                margin-left: 2px;
                 content: '';
                 background-image: url(../img/arrow-sort-revers.png);
                 .background-image();
@@ -354,7 +360,7 @@ body .champion .error {
                 display: inline-block;
                 width: 10px;
                 height: 13px;
-                margin-left: 5px;
+                margin-left: 2px;
                 content: '';
                 background-image: url(../img/arrow-sort.png);
                 .background-image();
@@ -397,14 +403,7 @@ body .champion .error {
             .background-image-col1();
         }
     }
-    a {
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        line-height: 50px;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
+    
 }
 
 .summary {

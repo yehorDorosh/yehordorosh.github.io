@@ -123,6 +123,14 @@ body .champion .error {
     width: 100%;
   }
 }
+a.btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 .btn:hover {
   color: #ff8000;
   background-color: white;
@@ -309,13 +317,13 @@ body .champion .error {
   min-width: 54px;
 }
 .table-section .tournament-table th:nth-child(2) {
-  width: 45.8%;
+  width: 40.8%;
 }
 .table-section .tournament-table th:nth-child(3) {
   width: 29%;
 }
 .table-section .tournament-table th:nth-child(4) {
-  width: 15.3%;
+  width: 20.3%;
 }
 .table-section .tournament-table tbody tr {
   background-image: url(../img/1px-row-line.png);
@@ -340,7 +348,7 @@ body .champion .error {
 .table-section .tournament-table thead th:hover {
   cursor: pointer;
 }
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .table-section .tournament-table thead {
     font-size: 0.7rem;
   }
@@ -349,7 +357,7 @@ body .champion .error {
   display: inline-block;
   width: 10px;
   height: 13px;
-  margin-left: 5px;
+  margin-left: 2px;
   content: '';
   background-image: url(../img/arrow-sort-revers.png);
   background-color: transparent;
@@ -361,7 +369,7 @@ body .champion .error {
   display: inline-block;
   width: 10px;
   height: 13px;
-  margin-left: 5px;
+  margin-left: 2px;
   content: '';
   background-image: url(../img/arrow-sort.png);
   background-color: transparent;
@@ -412,14 +420,6 @@ body .champion .error {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left top;
-}
-.table-section a {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  margin: 0 auto;
-  margin-top: 20px;
 }
 .summary {
   width: 600px;
