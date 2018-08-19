@@ -33,7 +33,7 @@ header .badge {
   width: 129px;
   background-image: url(../img/badge.png);
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   header {
     padding: 0;
   }
@@ -52,7 +52,7 @@ h1 {
   text-transform: uppercase;
   font-size: 3.9rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   h1 {
     font-size: 2rem;
   }
@@ -63,7 +63,7 @@ h2 {
   text-transform: uppercase;
   font-size: 2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   h2 {
     margin: 0;
     font-size: 1rem;
@@ -80,10 +80,10 @@ h3 {
   transform: translateX(-50%);
   position: fixed;
   padding: 10px 20px;
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 4px;
   text-align: center;
-  background: white;
+  background: #f6f8fa;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 :lang(ru) .message:before {
@@ -91,16 +91,13 @@ h3 {
 }
 .ok-btn {
   width: 20px;
-  height: 10px;
-  z-index: 1;
   transform: translateX(-50%);
   position: fixed;
-  padding: 10px 10px;
-  border: 0.5px solid black;
+  padding: 5px 10px;
+  border: 0.5px solid #3a4252;
   border-radius: 4px;
   text-align: center;
-  background: gray;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  background: #3a4252;
 }
 .ok-btn:hover {
   cursor: pointer;
@@ -120,7 +117,7 @@ body .champion .error {
   background-color: #ff8000;
   box-shadow: 0 2px 1px 0px #ca3e00;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .btn {
     margin-top: 30px;
     width: 100%;
@@ -129,7 +126,7 @@ body .champion .error {
 .btn:hover {
   color: #ff8000;
   background-color: white;
-  box-shadow: 0 2px 1px 0px #ff8000;
+  box-shadow: 0 0px 0px 0px #ff8000;
   cursor: pointer;
 }
 .btn:active {
@@ -147,7 +144,7 @@ body .champion .error {
   background-color: gray;
   box-shadow: 0 2px 1px 0px gray;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .btn-disabled {
     margin-top: 30px;
     width: 100%;
@@ -163,7 +160,7 @@ body .champion .error {
   background-color: black;
   background-clip: padding-box;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .background-section-champion {
     background-image: url(../img/background-football-mobile.png);
     background-size: cover;
@@ -185,7 +182,7 @@ body .champion .error {
   color: white;
   text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .champion {
     padding: 100px 13px 20px 13px;
     width: auto;
@@ -203,7 +200,7 @@ body .champion .error {
   background-repeat: no-repeat;
   margin: 0px 20px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .champion .awards--award {
     padding: 0 10px;
     box-sizing: border-box;
@@ -219,7 +216,7 @@ body .champion .error {
 .champion .awards__finance {
   background-image: url(../img/world-finance.png);
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .champion .awards {
     margin: 20px 0;
     justify-content: center;
@@ -244,16 +241,26 @@ body .champion .error {
   padding: 0 1rem;
   box-sizing: border-box;
 }
-@media (max-width: 417px) {
+@media (max-width: 640px) {
+  .champion .registration-form__field {
+    width: 48%;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 480px) {
   .champion .registration-form__field {
     width: 100%;
     margin: 3px 0;
     box-sizing: border-box;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .champion .registration-form {
     width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .champion .registration-form {
     height: auto;
     flex-direction: column;
   }
@@ -265,7 +272,7 @@ body .champion .error {
   padding: 40px 0;
   text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .table-section {
     padding: 3px;
     padding-top: 20px;
@@ -283,7 +290,7 @@ body .champion .error {
   box-sizing: border-box;
   border-radius: 5px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .table-section .plate {
     margin-top: 10px;
   }
@@ -302,13 +309,13 @@ body .champion .error {
   min-width: 54px;
 }
 .table-section .tournament-table th:nth-child(2) {
-  width: 40.8%;
+  width: 45.8%;
 }
 .table-section .tournament-table th:nth-child(3) {
-  width: 39%;
+  width: 29%;
 }
 .table-section .tournament-table th:nth-child(4) {
-  width: 10.3%;
+  width: 15.3%;
 }
 .table-section .tournament-table tbody tr {
   background-image: url(../img/1px-row-line.png);
@@ -330,7 +337,27 @@ body .champion .error {
 .table-section .tournament-table thead th {
   line-height: 50px;
 }
-.table-section .tournament-table thead th:first-child::after {
+.table-section .tournament-table thead th:hover {
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .table-section .tournament-table thead {
+    font-size: 0.7rem;
+  }
+}
+.table-section .tournament-table thead .sort-up:after {
+  display: inline-block;
+  width: 10px;
+  height: 13px;
+  margin-left: 5px;
+  content: '';
+  background-image: url(../img/arrow-sort-revers.png);
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.table-section .tournament-table thead .sort-down:after {
   display: inline-block;
   width: 10px;
   height: 13px;
@@ -386,6 +413,14 @@ body .champion .error {
   background-repeat: no-repeat;
   background-position: left top;
 }
+.table-section a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 .summary {
   width: 600px;
   margin: 0 auto;
@@ -399,7 +434,7 @@ body .champion .error {
 .summary .summary-text {
   padding-bottom: 30px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .summary {
     padding: 25px 3px;
     width: auto;
@@ -425,7 +460,7 @@ footer {
   padding-top: 32px;
   padding-bottom: 58px;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   footer {
     padding: 20px 3px;
   }
@@ -455,7 +490,7 @@ footer .payment {
   padding-bottom: 45px;
   text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   footer .payment {
     width: auto;
   }
@@ -464,7 +499,7 @@ footer .money {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   footer .money {
     flex-wrap: wrap;
     justify-content: center;
@@ -479,7 +514,7 @@ footer .money__service {
   background-position: center;
   background-image: url(../img/payment-sys-sprite.png);
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   footer .money__service {
     margin: 0 5px;
   }

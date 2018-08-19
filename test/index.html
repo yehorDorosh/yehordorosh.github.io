@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6" async="async"></script>
-    <script type="text/javascript" src="https://platform.twitter.com/widgets.js" async="async"></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6" async="async"></script>
+    <script src="https://platform.twitter.com/widgets.js" async="async"></script>
 
 </head>
 
@@ -21,7 +21,7 @@
     <main>
         <div class="background-section-champion">
             <section class="champion">
-                <a name ="top"></a>
+                <a name="top"></a>
                 <h1>стань чемпионом лиги</h1>
                 <h3>Вместе с Хамесом нашим Родригесом</h3>
                 <div class="awards">
@@ -42,10 +42,10 @@
             <section class="table-section">
                 <h2>турнирная таблица</h2>
                 <div class="plate">
-                    <table class="tournament-table">
+                    <table class="tournament-table" id="table">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th class="sort-down">#</th>
                                 <th>объём депозита</th>
                                 <th>номер счёта</th>
                                 <th>страна</th>
@@ -114,9 +114,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <form>
-                        <a href="#top"><input type="button" class="btn" value="Порвать всех!" /></a>
-                    </form>
+                    <a href="#top" class="btn">Порвать всех!</a>
                 </div>
             </section>
         </div>
@@ -126,11 +124,9 @@
                 <div class="summary-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
-
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RopvPNiPiT0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RopvPNiPiT0" style="border-width:0px" allowfullscreen></iframe>
                 </div>
-
             </section>
         </div>
     </main>
@@ -161,7 +157,18 @@
             <div class="secure__item secure--lock"></div> Защищено SSL
         </div>
     </footer>
-    <script type="text/javascript" src="js/validation.js" defer></script>
+    <script src="js/form.js" async="async"></script>
+    <script src="js/table.js" async="async"></script>
+    <script src="js/sort-table.js"></script>
+    <script>
+        var table = document.querySelector('table.tournament-table')
+        sortTable(
+            table, {
+                desc_class: 'sort-down',
+                asc_class: 'sort-up'
+            }
+        );
+    </script>
 </body>
 
 </html>
