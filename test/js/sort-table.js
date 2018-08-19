@@ -76,8 +76,8 @@ var sortTable = (function (global) {
 
         rows.sort(function (a, b) {
             var c = a;
-            a = a.cells[index].innerText.replace('$', '');
-            b = b.cells[index].innerText.replace('$', '');
+            a = a.cells[index].innerText.replace(/[$\s-]/g, '');
+            b = b.cells[index].innerText.replace(/[$\s-]/g, '');
             if (reverse) {
                 a = b;
                 b = c;
