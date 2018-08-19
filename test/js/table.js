@@ -1,4 +1,6 @@
 //---------------format values in table
+
+{
 let deposit = [];
 let account = [];
 let newDeposit = [];
@@ -20,4 +22,5 @@ for (let i = 0; i < deposit.length; i++) {
 for (let i = 1; i < 11; i++) {
     table.rows[i].cells[1].innerText = newDeposit[i - 1];
     table.rows[i].cells[2].innerText = newAccount[i - 1];
+}
 }
