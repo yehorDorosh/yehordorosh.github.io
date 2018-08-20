@@ -1,3 +1,4 @@
+'use strict'
 var sortTable = (function (global) {
 
     var SORT_DIRECTION_ASC = 'ASC';
@@ -56,13 +57,13 @@ var sortTable = (function (global) {
 
     Tablesort.prototype.updateClassName = function (element, reset = false) {
         if (reset) {
-            regexp = new RegExp(this.asc_class + '|' + this.desc_class, "g");
+            var regexp = new RegExp(this.asc_class + '|' + this.desc_class, "g");
             element.className = element.className.replace(regexp, '')
             return;
         }
 
         regexp = this.direction === SORT_DIRECTION_ASC ? this.desc_class : this.asc_class;
-        direction_class = this.direction === SORT_DIRECTION_ASC ? this.asc_class : this.desc_class;
+        var direction_class = this.direction === SORT_DIRECTION_ASC ? this.asc_class : this.desc_class;
         regexp = new RegExp(" ?" + regexp + " ?" , "g");
         element.className = element.className.replace(regexp, '') + ' ' + direction_class;
     }
@@ -85,7 +86,7 @@ var sortTable = (function (global) {
             return isNaN(a - b) ? a.localeCompare(b) : a - b;
         });
 
-        for (i in rows) {
+        for (var i in rows) {
             clone_tbody.appendChild(rows[i]);
         }
         this.table.replaceChild(clone_tbody, original_tbody);
