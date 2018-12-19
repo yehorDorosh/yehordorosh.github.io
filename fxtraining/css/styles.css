@@ -2,6 +2,10 @@
   font-family: Roboto;
   src: url(../font/Roboto-Regular.ttf);
 }
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../font/Roboto-Bold.ttf);
+}
 html {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -9,14 +13,13 @@ html {
 }
 h1 {
   margin: 0;
-  font-size: 48px;
-  line-height: 52px;
-  font-weight: 500;
+  font-weight: 900;
+  font: 48px Roboto-Bold;
 }
 h2 {
   margin: 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-weight: 900;
+  font: 48px Roboto-Bold;
 }
 h3 {
   margin: 0;
@@ -94,7 +97,7 @@ header .logo a {
   header .logo {
     height: 64px;
     width: 128px;
-    background-image: url(../img/forexclub-aidents-phone.png);
+    background-image: url(../img/forexclub-aidents-Phone.png);
   }
 }
 header .useful-links {
@@ -128,7 +131,7 @@ header .useful-links :last-child {
     left: 100%;
   }
   header .useful-links a {
-    visibility: hidden;
+    display: none;
   }
 }
 header .sub-menu {
@@ -146,7 +149,7 @@ header .sub-menu {
   animation-duration: 1s;
 }
 header .sub-menu a {
-  visibility: visible;
+  display: auto;
   margin-left: 22px;
   margin-top: 16px;
   font-size: 16px;
@@ -210,84 +213,123 @@ main {
     margin-bottom: 24px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price .bitcoin {
+.bitcoin-rate-reg .bitcoin-price--bitcoin {
   margin-right: 24px;
 }
-.bitcoin-rate-reg .bitcoin-price .bitcoin h1 {
-  font-weight: 900;
-}
 @media (max-width: 925px) {
-  .bitcoin-rate-reg .bitcoin-price .bitcoin {
+  .bitcoin-rate-reg .bitcoin-price--bitcoin {
     margin: 0;
   }
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price .bitcoin {
+  .bitcoin-rate-reg .bitcoin-price--bitcoin {
     order: 2;
     margin: 0 auto;
     margin-bottom: 8px;
     font-size: 40px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price .data-time {
+.bitcoin-rate-reg .bitcoin-price--data-time {
   display: flex;
   align-items: flex-end;
   flex-basis: 50%;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price .data-time {
+  .bitcoin-rate-reg .bitcoin-price--data-time {
     order: 1;
     flex-basis: auto;
     margin: 0 auto;
     margin-bottom: 24px;
   }
-  .bitcoin-rate-reg .bitcoin-price .data-time :first-child {
+  .bitcoin-rate-reg .bitcoin-price--data-time :first-child {
     margin-right: 8px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price .price {
+.bitcoin-rate-reg .bitcoin-price--price {
   margin-right: 16px;
+  font-size: 48px;
 }
 @media (max-width: 925px) {
-  .bitcoin-rate-reg .bitcoin-price .price {
+  .bitcoin-rate-reg .bitcoin-price--price {
     margin: 0;
   }
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price .price {
+  .bitcoin-rate-reg .bitcoin-price--price {
     order: 3;
     margin: 0 auto;
     font-size: 40px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price .dynamics {
+.bitcoin-rate-reg .bitcoin-price--dynamics {
   display: flex;
   align-items: flex-end;
   font-size: 32px;
   color: #4EB43A;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price .dynamics {
+  .bitcoin-rate-reg .bitcoin-price--dynamics {
     order: 5;
     margin: 0 auto;
   }
 }
-.bitcoin-rate-reg .bitcoin-price .price-in-rub {
+.bitcoin-rate-reg .bitcoin-price--price-in-rub {
   margin: 4px 0;
   font-size: 24px;
   font-weight: 400;
   flex-basis: 50%;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price .price-in-rub {
+  .bitcoin-rate-reg .bitcoin-price--price-in-rub {
     order: 4;
     margin: 0 auto;
     margin-bottom: 16px;
     font-size: 18px;
   }
 }
+.bitcoin-rate-reg .deal {
+  width: 50%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: 730px) {
-  .deal:before {
+  .bitcoin-rate-reg .deal {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+.bitcoin-rate-reg .deal--coment {
+  font-weight: 700;
+  background: url(../img/mark-rows.png) 0px 0px no-repeat;
+  padding-left: 40px;
+  padding-top: 3px;
+}
+@media (max-width: 730px) {
+  .bitcoin-rate-reg .deal--coment {
+    background-image: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+.bitcoin-rate-reg .deal--top-reg-btn {
+  width: 202px;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 40px;
+  margin-top: 16px;
+}
+@media (max-width: 730px) {
+  .bitcoin-rate-reg .deal--top-reg-btn {
+    padding: 0;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 730px) {
+  .bitcoin-rate-reg .deal:before {
     content: '';
     display: block;
     height: 24px;
@@ -297,47 +339,6 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 19px;
-  }
-}
-.deal {
-  width: 50%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-@media (max-width: 730px) {
-  .deal {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-}
-.deal .coment {
-  font-weight: 700;
-  background: url(../img/mark-rows.png) 0px 0px no-repeat;
-  padding-left: 40px;
-  padding-top: 3px;
-}
-@media (max-width: 730px) {
-  .deal .coment {
-    background-image: none;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-}
-.deal .top-reg-btn {
-  width: 202px;
-  height: 48px;
-  line-height: 48px;
-  margin-left: 40px;
-  margin-top: 16px;
-}
-@media (max-width: 730px) {
-  .deal .top-reg-btn {
-    padding: 0;
-    margin: 0 auto;
-    height: 40px;
-    line-height: 40px;
   }
 }
 .form-bg {
@@ -367,7 +368,7 @@ main {
   border: none;
   background-color: #ffffff;
 }
-.form-bg .reg-window__cross {
+.form-bg .reg-window--cross {
   height: 12px;
   width: 12px;
   background-image: url(../img/menu-close-phone.png);
@@ -377,10 +378,10 @@ main {
   top: 16px;
   right: 16px;
 }
-.form-bg .reg-window__cross:hover {
+.form-bg .reg-window--cross:hover {
   cursor: pointer;
 }
-.form-bg .reg-window__text1 {
+.form-bg .reg-window--text1 {
   display: block;
   margin: 0;
   margin-bottom: 41px;
@@ -418,7 +419,7 @@ main {
   margin-top: 2px;
   margin-right: 8px;
 }
-.form-bg .reg-window__text2 {
+.form-bg .reg-window--text2 {
   font-size: 14px;
   color: #6f7780;
   float: left;
@@ -427,7 +428,7 @@ main {
   margin: 0;
   margin-bottom: 41px;
 }
-.form-bg .reg-window__text3 {
+.form-bg .reg-window--text3 {
   clear: left;
   font-size: 14px;
   color: #6f7780;
@@ -490,4 +491,155 @@ main {
 .application .apps--google-play {
   background-image: url(../img/google-play.png);
   margin-left: 4px;
+}
+.how-make-money {
+  box-sizing: border-box;
+  padding-bottom: 72px;
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+.how-make-money--table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.how-make-money--table caption {
+  margin-bottom: 85px;
+}
+@media (max-width: 730px) {
+  .how-make-money--table caption {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+.how-make-money--table th {
+  font-size: 32px;
+  padding-bottom: 24px;
+}
+@media (max-width: 730px) {
+  .how-make-money--table th {
+    font-size: 24px;
+  }
+}
+.how-make-money--table th:last-child {
+  color: #FF6F08;
+}
+.how-make-money--table th:not(:last-child) {
+  padding-right: 30px;
+}
+@media (max-width: 730px) {
+  .how-make-money--table th:not(:last-child) {
+    display: block;
+  }
+}
+@media (max-width: 730px) {
+  .how-make-money--table th:first-child {
+    display: none;
+  }
+}
+@media (max-width: 730px) {
+  .how-make-money--table {
+    font-size: 14px;
+  }
+}
+.how-make-money--table tr:not(:last-child) {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+@media (max-width: 730px) {
+  .how-make-money--table tr:last-child td:not(:last-child) {
+    display: none;
+  }
+}
+.how-make-money--table tr:last-child td:last-child {
+  padding-top: 60px;
+  padding-left: 0;
+}
+.how-make-money--table td {
+  padding: 24px 0px 16px 0px;
+  vertical-align: top;
+}
+.how-make-money--table td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+}
+@media (max-width: 730px) {
+  .how-make-money--table td:first-child {
+    font-size: 16px;
+  }
+}
+.how-make-money--table td:last-child {
+  background-color: rgba(100, 44, 3, 0.05);
+}
+@media (max-width: 730px) {
+  .how-make-money--table td:last-child {
+    padding-top: 60px;
+    padding-left: 8px;
+  }
+}
+.how-make-money--table td:nth-child(2) {
+  padding: 0px;
+}
+.how-make-money--table td:not(:last-child) {
+  padding-right: 30px;
+}
+@media (max-width: 730px) {
+  .how-make-money--table td:not(:last-child) {
+    display: block;
+    padding-right: 16px;
+  }
+}
+.how-make-money--btn {
+  width: 345px;
+  height: 55px;
+  font-size: 24px;
+  box-sizing: border-box;
+  line-height: 55px;
+  margin-right: 8px;
+}
+@media (max-width: 730px) {
+  .how-make-money--btn {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 730px) {
+  .how-make-money--text1 {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.how-make-money--text1:before {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/giftcard.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  margin-right: 8px;
+}
+.crypto-rate__table {
+  width: 100%;
+}
+.crypto-rate__table td {
+  border: solid 1px;
+}
+@media (max-width: 730px) {
+  .crypto-rate__table td:nth-child(n+2):nth-child(-n+3) {
+    display: block;
+  }
+  .crypto-rate__table td:nth-child(n+6):nth-child(-n+7) {
+    display: block;
+  }
 }

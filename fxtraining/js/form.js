@@ -3,7 +3,7 @@ let email = form.elements.email;
 let password = form.elements.password;
 let btnSubmit = form.elements.submit;
 let checkBox = form.elements.checkbox;
-let text = document.querySelector('.reg-window__text2');
+let text = document.querySelector('.reg-window--text2');
 
 function checkValidInput(inputElem, mask, required) {
     if (inputElem.value.match(mask) != null || (!required && !inputElem.value)) {
