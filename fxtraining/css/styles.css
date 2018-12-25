@@ -501,8 +501,6 @@ main {
 .application .apps__item {
   height: 48px;
   width: 173px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 @media (max-width: 730px) {
   .application .apps__item {
