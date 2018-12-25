@@ -584,6 +584,9 @@ main {
   background-repeat: no-repeat;
   background-size: 100% 1px;
 }
+.how-make-money__table tr:nth-child(5) {
+  background-image: none;
+}
 @media (max-width: 730px) {
   .how-make-money__table tr:last-child td:not(:last-child) {
     display: none;
@@ -591,8 +594,13 @@ main {
 }
 .how-make-money__table tr:last-child td:last-child {
   padding-top: 60px;
-  padding-left: 0;
-  background-color: #FFFFFF;
+  padding-left: 24px;
+}
+@media (max-width: 730px) {
+  .how-make-money__table tr:last-child td:last-child {
+    background-color: #FFFFFF;
+    padding-left: 0;
+  }
 }
 .how-make-money__table td {
   padding: 24px 24px 16px 24px;
