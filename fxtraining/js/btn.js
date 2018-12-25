@@ -9,10 +9,10 @@ subMenu.onclick = function (e) {
     if ((e.offsetX > (subMenu.offsetWidth - 65)) & target.className == 'caption') toggleClass(subMenu, 'useful-links', 'sub-menu');
 }
 
-let regBtn = document.querySelector('.deal--top-reg-btn');
+let regBtn = document.querySelector('.deal__top-reg-btn');
 let formBg = document.querySelector('.form-bg');
 let formCross = document.querySelector('.reg-window--cross');
-let regBtn2 = document.querySelector('.how-make-money--btn');
+let regBtn2 = document.querySelector('.how-make-money__btn');
 
 regBtn.onclick = function (e) {
     let target = e.target;

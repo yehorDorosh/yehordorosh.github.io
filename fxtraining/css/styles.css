@@ -30,9 +30,14 @@ h3 {
 body {
   margin: 48px 200px 140px 200px;
 }
-@media (max-width: 1325px) {
+@media (max-width: 1200px) {
   body {
-    margin: 48px 0px 140px 0px;
+    margin: 48px 80px 140px 80px;
+  }
+}
+@media (max-width: 960px) {
+  body {
+    margin: 48px 16px 140px 16px;
   }
 }
 @media (max-width: 730px) {
@@ -113,9 +118,14 @@ header .useful-links div:first-child {
 header .useful-links a {
   margin: 0 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   header .useful-links a {
     margin: 0 5px;
+  }
+}
+@media (max-width: 960px) {
+  header .useful-links a {
+    font-size: 18px;
   }
 }
 header .useful-links :last-child {
@@ -213,74 +223,82 @@ main {
     margin-bottom: 24px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price--bitcoin {
+.bitcoin-rate-reg .bitcoin-price__bitcoin {
   margin-right: 24px;
 }
-@media (max-width: 925px) {
-  .bitcoin-rate-reg .bitcoin-price--bitcoin {
-    margin: 0;
+@media (max-width: 1200px) {
+  .bitcoin-rate-reg .bitcoin-price__bitcoin {
+    margin-right: 5px;
   }
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price--bitcoin {
+  .bitcoin-rate-reg .bitcoin-price__bitcoin {
     order: 2;
     margin: 0 auto;
     margin-bottom: 8px;
     font-size: 40px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price--data-time {
+.bitcoin-rate-reg .bitcoin-price__data-time {
   display: flex;
   align-items: flex-end;
   flex-basis: 50%;
+  padding-bottom: 8px;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price--data-time {
+  .bitcoin-rate-reg .bitcoin-price__data-time {
     order: 1;
     flex-basis: auto;
     margin: 0 auto;
     margin-bottom: 24px;
   }
-  .bitcoin-rate-reg .bitcoin-price--data-time :first-child {
+  .bitcoin-rate-reg .bitcoin-price__data-time :first-child {
     margin-right: 8px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price--price {
+.bitcoin-rate-reg .bitcoin-price__price {
   margin-right: 16px;
   font-size: 48px;
 }
-@media (max-width: 925px) {
-  .bitcoin-rate-reg .bitcoin-price--price {
-    margin: 0;
+@media (max-width: 1300px) {
+  .bitcoin-rate-reg .bitcoin-price__price {
+    margin-right: 5px;
   }
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price--price {
+  .bitcoin-rate-reg .bitcoin-price__price {
     order: 3;
     margin: 0 auto;
     font-size: 40px;
   }
 }
-.bitcoin-rate-reg .bitcoin-price--dynamics {
+.bitcoin-rate-reg .bitcoin-price__dynamics {
   display: flex;
   align-items: flex-end;
   font-size: 32px;
   color: #4EB43A;
+  padding-bottom: 6px;
+}
+@media (max-width: 1300px) {
+  .bitcoin-rate-reg .bitcoin-price__dynamics {
+    font-size: 28px;
+    margin-right: 10px;
+  }
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price--dynamics {
+  .bitcoin-rate-reg .bitcoin-price__dynamics {
     order: 5;
     margin: 0 auto;
   }
 }
-.bitcoin-rate-reg .bitcoin-price--price-in-rub {
+.bitcoin-rate-reg .bitcoin-price__price-in-rub {
   margin: 4px 0;
   font-size: 24px;
   font-weight: 400;
   flex-basis: 50%;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .bitcoin-price--price-in-rub {
+  .bitcoin-rate-reg .bitcoin-price__price-in-rub {
     order: 4;
     margin: 0 auto;
     margin-bottom: 16px;
@@ -299,21 +317,21 @@ main {
     margin-bottom: 32px;
   }
 }
-.bitcoin-rate-reg .deal--coment {
+.bitcoin-rate-reg .deal__coment {
   font-weight: 700;
   background: url(../img/mark-rows.png) 0px 0px no-repeat;
   padding-left: 40px;
   padding-top: 3px;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .deal--coment {
+  .bitcoin-rate-reg .deal__coment {
     background-image: none;
     padding: 0;
     text-align: center;
     margin-bottom: 24px;
   }
 }
-.bitcoin-rate-reg .deal--top-reg-btn {
+.bitcoin-rate-reg .deal__top-reg-btn {
   width: 202px;
   height: 48px;
   line-height: 48px;
@@ -321,7 +339,7 @@ main {
   margin-top: 16px;
 }
 @media (max-width: 730px) {
-  .bitcoin-rate-reg .deal--top-reg-btn {
+  .bitcoin-rate-reg .deal__top-reg-btn {
     padding: 0;
     margin: 0 auto;
     height: 40px;
@@ -339,6 +357,10 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 19px;
+  }
+  .bitcoin-rate-reg .deal li:last-child {
+    margin: 0 auto;
+    width: 202px;
   }
 }
 .form-bg {
@@ -437,10 +459,14 @@ main {
   text-align: center;
 }
 .application {
-  margin-top: 97px;
+  margin-top: 65px;
   margin-bottom: 35px;
+  border: dashed 1px #D6DBE3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 35px 0;
 }
-.application--text1 {
+.application__text-rate {
   font-size: 24px;
   color: #FF6F08;
   text-align: center;
@@ -448,11 +474,11 @@ main {
   margin-bottom: 16px;
 }
 @media (max-width: 730px) {
-  .application--text1 {
+  .application__text-rate {
     font-size: 18px;
   }
 }
-.application--text2 {
+.application__text-platforms {
   font-size: 18px;
   color: #926C51;
   text-align: center;
@@ -460,7 +486,7 @@ main {
   margin-bottom: 16px;
 }
 @media (max-width: 730px) {
-  .application--text2 {
+  .application__text-platforms {
     font-size: 14px;
   }
 }
@@ -485,11 +511,9 @@ main {
   }
 }
 .application .apps--app-store {
-  background-image: url(../img/app-store.png);
   margin-right: 4px;
 }
 .application .apps--google-play {
-  background-image: url(../img/google-play.png);
   margin-left: 4px;
 }
 .how-make-money {
@@ -500,99 +524,117 @@ main {
   background-repeat: no-repeat;
   background-size: 100% 2px;
 }
-.how-make-money--table {
+@media (max-width: 730px) {
+  .how-make-money {
+    padding-bottom: 32px;
+  }
+}
+.how-make-money__table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.how-make-money--table caption {
+.how-make-money__table caption {
   margin-bottom: 85px;
 }
 @media (max-width: 730px) {
-  .how-make-money--table caption {
+  .how-make-money__table caption {
     font-size: 32px;
     margin-bottom: 40px;
   }
 }
-.how-make-money--table th {
+.how-make-money__table th {
   font-size: 32px;
   padding-bottom: 24px;
-}
-@media (max-width: 730px) {
-  .how-make-money--table th {
-    font-size: 24px;
-  }
-}
-.how-make-money--table th:last-child {
-  color: #FF6F08;
-}
-.how-make-money--table th:not(:last-child) {
-  padding-right: 30px;
-}
-@media (max-width: 730px) {
-  .how-make-money--table th:not(:last-child) {
-    display: block;
-  }
-}
-@media (max-width: 730px) {
-  .how-make-money--table th:first-child {
-    display: none;
-  }
-}
-@media (max-width: 730px) {
-  .how-make-money--table {
-    font-size: 14px;
-  }
-}
-.how-make-money--table tr:not(:last-child) {
+  padding-top: 48px;
   background-image: url(../img/table-line.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
 }
 @media (max-width: 730px) {
-  .how-make-money--table tr:last-child td:not(:last-child) {
+  .how-make-money__table th {
+    font-size: 24px;
+  }
+}
+.how-make-money__table th:last-child {
+  color: #FF6F08;
+  background-color: rgba(255, 44, 3, 0.05);
+}
+.how-make-money__table th:not(:last-child) {
+  padding-right: 30px;
+}
+@media (max-width: 730px) {
+  .how-make-money__table th:not(:last-child) {
+    display: block;
+  }
+}
+@media (max-width: 730px) {
+  .how-make-money__table th:first-child {
     display: none;
   }
 }
-.how-make-money--table tr:last-child td:last-child {
+@media (max-width: 730px) {
+  .how-make-money__table {
+    font-size: 14px;
+  }
+}
+.how-make-money__table tr:not(:last-child) {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+@media (max-width: 730px) {
+  .how-make-money__table tr:last-child td:not(:last-child) {
+    display: none;
+  }
+}
+.how-make-money__table tr:last-child td:last-child {
   padding-top: 60px;
   padding-left: 0;
+  background-color: #FFFFFF;
 }
-.how-make-money--table td {
-  padding: 24px 0px 16px 0px;
+.how-make-money__table td {
+  padding: 24px 24px 16px 24px;
   vertical-align: top;
 }
-.how-make-money--table td:first-child {
+@media (max-width: 960px) {
+  .how-make-money__table td {
+    padding: 24px 8px 16px 8px;
+    font-size: 16px;
+  }
+}
+.how-make-money__table td:first-child {
   font-weight: bold;
   white-space: nowrap;
 }
 @media (max-width: 730px) {
-  .how-make-money--table td:first-child {
+  .how-make-money__table td:first-child {
     font-size: 16px;
+    padding-left: 0px;
   }
 }
-.how-make-money--table td:last-child {
-  background-color: rgba(100, 44, 3, 0.05);
+.how-make-money__table td:last-child {
+  background-color: rgba(255, 44, 3, 0.05);
 }
 @media (max-width: 730px) {
-  .how-make-money--table td:last-child {
+  .how-make-money__table td:last-child {
     padding-top: 60px;
     padding-left: 8px;
   }
 }
-.how-make-money--table td:nth-child(2) {
-  padding: 0px;
-}
-.how-make-money--table td:not(:last-child) {
-  padding-right: 30px;
-}
 @media (max-width: 730px) {
-  .how-make-money--table td:not(:last-child) {
-    display: block;
-    padding-right: 16px;
+  .how-make-money__table td:nth-child(2) {
+    padding: 0px;
   }
 }
-.how-make-money--btn {
+@media (max-width: 730px) {
+  .how-make-money__table td:not(:last-child) {
+    display: block;
+    padding-right: 8px;
+  }
+}
+.how-make-money__btn {
   width: 345px;
   height: 55px;
   font-size: 24px;
@@ -601,7 +643,7 @@ main {
   margin-right: 8px;
 }
 @media (max-width: 730px) {
-  .how-make-money--btn {
+  .how-make-money__btn {
     margin: 0 auto;
     width: 100%;
     height: 40px;
@@ -610,14 +652,14 @@ main {
   }
 }
 @media (max-width: 730px) {
-  .how-make-money--text1 {
+  .how-make-money__text-bonus {
     display: inline-block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.how-make-money--text1:before {
+.how-make-money__text-bonus:before {
   display: inline-block;
   content: "";
   width: 20px;
@@ -638,6 +680,9 @@ main {
 @media (max-width: 730px) {
   .crypto-rate__table td:nth-child(n+2):nth-child(-n+3) {
     display: block;
+  }
+  .crypto-rate__table td:nth-child(n+4):nth-child(-n+5) {
+    vertical-align: bottom;
   }
   .crypto-rate__table td:nth-child(n+6):nth-child(-n+7) {
     display: block;
