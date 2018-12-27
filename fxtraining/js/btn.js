@@ -13,6 +13,7 @@ let regBtn = document.querySelector('.deal__top-reg-btn');
 let formBg = document.querySelector('.form-bg');
 let formCross = document.querySelector('.reg-window--cross');
 let regBtn2 = document.querySelector('.how-make-money__btn');
+let cryptoTable = document.querySelector('.crypto-rate__table');
 
 regBtn.onclick = function (e) {
     let target = e.target;
@@ -21,6 +22,11 @@ regBtn.onclick = function (e) {
 
 regBtn2.onclick = function() {
     formBg.style.display = 'block';
+}
+
+cryptoTable.onclick = function(e) {
+    let target = e.target;
+    if (target.className =='crypto-rate__table--btn') formBg.style.display = 'block';
 }
 
 formCross.onclick = function (e) {

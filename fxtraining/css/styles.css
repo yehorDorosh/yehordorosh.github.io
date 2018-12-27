@@ -516,11 +516,11 @@ main {
 }
 .how-make-money {
   box-sizing: border-box;
-  padding-bottom: 72px;
   background-image: url(../img/table-line.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% 2px;
+  padding-bottom: 84px;
 }
 @media (max-width: 730px) {
   .how-make-money {
@@ -677,20 +677,416 @@ main {
   float: left;
   margin-right: 8px;
 }
-.crypto-rate__table {
-  width: 100%;
-}
-.crypto-rate__table td {
-  border: solid 1px;
+.crypto-rate {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 84px;
 }
 @media (max-width: 730px) {
-  .crypto-rate__table td:nth-child(n+2):nth-child(-n+3) {
+  .crypto-rate {
+    padding-bottom: 32px;
+  }
+}
+.crypto-rate .crypto-rate__table {
+  width: 100%;
+}
+.crypto-rate .crypto-rate__table caption {
+  text-align: left;
+  font-size: 24px;
+  margin-top: 23px;
+  margin-bottom: 38px;
+}
+.crypto-rate .crypto-rate__table caption .crypto-rate__table--cap-rates {
+  font-weight: bold;
+}
+.crypto-rate .crypto-rate__table tr {
+  height: 80px;
+}
+.crypto-rate .crypto-rate__table td {
+  font-size: 24px;
+}
+.crypto-rate .crypto-rate__table td:nth-child(2) {
+  padding-left: 16px;
+  white-space: nowrap;
+}
+.crypto-rate .crypto-rate__table td:nth-child(3) {
+  text-align: right;
+}
+.crypto-rate .crypto-rate__table td:nth-child(n+4):nth-child(-n+5) {
+  color: #4EB43A;
+  text-align: right;
+}
+.crypto-rate .crypto-rate__table tr:not(:last-child) {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+@media (max-width: 730px) {
+  .crypto-rate .crypto-rate__table caption {
+    text-align: center;
+    font-size: 16px;
+  }
+  .crypto-rate .crypto-rate__table tr {
+    height: 68px;
+    background-image: none !important;
+  }
+  .crypto-rate .crypto-rate__table td {
+    font-size: 13px;
+  }
+  .crypto-rate .crypto-rate__table td:nth-child(2) {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .crypto-rate .crypto-rate__table td:nth-child(n+2):nth-child(-n+3) {
+    display: block;
+    text-align: left;
+    padding-left: 16px;
+    transform: translateY(40%);
+  }
+  .crypto-rate .crypto-rate__table td:nth-child(n+4):nth-child(-n+5) {
+    text-align: left;
+    padding-top: 15px;
+  }
+  .crypto-rate .crypto-rate__table td:nth-child(n+6):nth-child(-n+7) {
     display: block;
   }
-  .crypto-rate__table td:nth-child(n+4):nth-child(-n+5) {
-    vertical-align: bottom;
+}
+.crypto-rate .crypto-rate__table .crypto {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.crypto-rate .crypto-rate__table--btn {
+  height: 32px;
+  width: 87px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #6F7780;
+  border: 1px solid #E5E6EA;
+  border-radius: 2px;
+  background: none;
+}
+@media (max-width: 730px) {
+  .crypto-rate .crypto-rate__table--btn {
+    height: 24px;
+    width: 72px;
+    font-size: 13px;
   }
-  .crypto-rate__table td:nth-child(n+6):nth-child(-n+7) {
-    display: block;
+}
+.crypto-rate .crypto-rate__table--btn:hover {
+  cursor: pointer;
+}
+.crypto-rate .crypto-rate__table--etherium {
+  background-image: url(../img/etherium3.svg);
+}
+.crypto-rate .crypto-rate__table--ripple {
+  background-image: url(../img/ripple.svg);
+}
+.crypto-rate .crypto-rate__table--bitcoin-cash {
+  background-image: url(../img/bitcoin-cash.svg);
+}
+.crypto-rate .crypto-rate__table--iota {
+  background-image: url(../img/iota.svg);
+}
+.crypto-rate .crypto-rate__table--dash {
+  background-image: url(../img/dash.svg);
+}
+.crypto-rate .crypto-rate__table--monero {
+  background-image: url(../img/monero.svg);
+}
+.bitcoin-news {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 84px;
+}
+@media (max-width: 730px) {
+  .bitcoin-news {
+    padding-bottom: 32px;
   }
+}
+.bitcoin-news h2 {
+  text-align: center;
+  margin: 46px 0 64px 0;
+}
+@media (max-width: 730px) {
+  .bitcoin-news h2 {
+    font-size: 32px;
+    margin: 32px 0 48px 0;
+  }
+}
+.bitcoin-news .bitcoin-news-bloks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bitcoin-news .bitcoin-news-bloks p {
+  color: #6F7780;
+  font-size: 14px;
+}
+.bitcoin-news .bitcoin-news-bloks a:hover {
+  color: #FF6F08;
+}
+.bitcoin-news .bitcoin-news-bloks__block {
+  width: 45%;
+  margin: 0 2.5%;
+}
+@media (max-width: 730px) {
+  .bitcoin-news .bitcoin-news-bloks__block {
+    width: 100%;
+    margin: 0;
+  }
+}
+.bitcoin-news .bitcoin-news-bloks__block:not(:last-child) {
+  margin-bottom: 16px;
+}
+.banks {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 84px;
+}
+@media (max-width: 730px) {
+  .banks {
+    padding-bottom: 32px;
+  }
+}
+.banks h3 {
+  text-align: center;
+  padding-bottom: 73px;
+  padding-top: 63px;
+}
+@media (max-width: 960px) {
+  .banks h3 {
+    font-size: 16px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+}
+.banks .banks-logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.banks .banks-logo--citybank {
+  width: 20%;
+}
+.banks .banks-logo--hsbc {
+  width: 18%;
+}
+.banks .banks-logo--commerzbank {
+  width: 32%;
+}
+.banks .banks-logo--bitfinex {
+  width: 29%;
+}
+.banks .banks-logo--barclays {
+  width: 25%;
+}
+.banks .banks-logo--jpmorganchase {
+  width: 35%;
+}
+.banks .banks-logo--itbit {
+  width: 10%;
+}
+.banks .banks-logo--kraken {
+  width: 27%;
+}
+.banks .banks-logo--nowura {
+  width: 22%;
+}
+.banks .banks-logo--poloniex {
+  width: 24%;
+}
+.banks .banks-logo--gdax {
+  width: 20%;
+}
+.banks .banks-logo--creditsuisse {
+  width: 32%;
+}
+.banks .banks-logo__block {
+  height: 72px;
+  margin: 5px 0;
+}
+.banks .banks-logo__block img {
+  display: block;
+  margin: 0 auto;
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  .banks .banks-logo__block {
+    width: 45%;
+    margin: 0;
+  }
+}
+.bitcoin-info {
+  padding-top: 64px;
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 84px;
+}
+@media (max-width: 730px) {
+  .bitcoin-info {
+    padding-bottom: 32px;
+  }
+}
+.bitcoin-info h4 {
+  margin-bottom: 0.2rem;
+}
+.bitcoin-info .bitcoin-warning {
+  margin: 2rem 0;
+  color: blue;
+}
+.bitcoin-info p {
+  margin: 0;
+}
+@media (max-width: 730px) {
+  .bitcoin-info {
+    font-size: 14px;
+    padding-top: 32px;
+  }
+}
+.payments {
+  background-image: url(../img/table-line.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 84px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+}
+@media (max-width: 730px) {
+  .payments {
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 730px) {
+  .payments {
+    flex-direction: column;
+    padding-top: 32px;
+  }
+}
+.payments .coll-left {
+  width: 48%;
+  font-size: 12px;
+  color: #6F7780;
+}
+@media (max-width: 730px) {
+  .payments .coll-left {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+.payments .coll-right {
+  width: 48%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+.payments .coll-right .pay-sys {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys {
+    justify-content: center;
+  }
+}
+.payments .coll-right .pay-sys--visa {
+  width: 18%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--visa {
+    width: 34%;
+  }
+}
+.payments .coll-right .pay-sys--mastercard {
+  width: 11%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--mastercard {
+    width: 21%;
+  }
+}
+.payments .coll-right .pay-sys--mir {
+  width: 21%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--mir {
+    width: 38%;
+  }
+}
+.payments .coll-right .pay-sys--webmoney {
+  width: 40%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--webmoney {
+    width: 48%;
+  }
+}
+.payments .coll-right .pay-sys--yandexmoney {
+  width: 30%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--yandexmoney {
+    width: 48%;
+  }
+}
+.payments .coll-right .pay-sys--qiwi {
+  width: 18%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--qiwi {
+    width: 28%;
+  }
+}
+.payments .coll-right .pay-sys--skrill {
+  width: 16%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--skrill {
+    width: 25%;
+  }
+}
+.payments .coll-right .pay-sys--neteller {
+  width: 26%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys--neteller {
+    width: 40%;
+  }
+}
+.payments .coll-right .pay-sys__block {
+  margin: 5px 1%;
+}
+@media (max-width: 730px) {
+  .payments .coll-right .pay-sys__block {
+    margin: 5px 0;
+  }
+}
+.payments .coll-right .pay-sys__block img {
+  display: block;
+  margin: 0 auto;
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
 }
