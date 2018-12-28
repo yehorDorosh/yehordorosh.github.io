@@ -1,0 +1,1046 @@
+@widthWide-1: 960px;
+@widthWide-2: 980px;
+@widthPhone-1: 760px;
+@widthIPad-1: 768px;
+//* {border: solid 0.1px black;margin: 1px;}
+@font-face {
+    font-family: Roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+html {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    word-wrap: normal;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 900;
+    font: 48px Roboto-Bold;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 900;
+    font: 48px Roboto-Bold;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+//default option for background image in blocks
+.background-image() {
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #FF6F08;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.error {
+    border: solid 1px #f65151 !important;
+}
+
+.message {
+    font-size: 14px;
+    color: #f65151;
+    margin: 8px auto;
+    @media (max-width: 235px) {
+         margin: 3px auto;
+                font-size: 10px;
+            }
+}
+
+.end-line {
+    background-image: url(../img/table-line.png);
+    height: 2px;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    margin: 70px 40px 45px 40px;
+     @media (max-width: 1200px) {
+        margin: 70px 16px 45px 16px;
+    }
+    @media (max-width: @widthPhone-1) {
+        margin: 32px 16px 32px 16px;
+    }
+}
+
+.page-size() {
+    width: 960px;
+    margin: 0 auto;
+    @media (max-width: @widthWide-2) {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+@keyframes openSubMenu {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 30%;
+    }
+}
+
+@keyframes closeSubMenu {
+    from {
+        left: -80%;
+    }
+    to {
+        left: 0%;
+    }
+}
+header {
+    .page-size();
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+     @media (max-width: @widthPhone-1) {
+         margin-top: 16px;
+    }
+    .logo {
+        a {
+            display: block;
+            height: 100%;
+        }
+        .background-image();
+        height: 70px;
+        width: 140px;
+        background-image: url(../img/forexclub-aidents.png);
+        flex-shrink: 0;
+        @media (max-width: @widthPhone-1) {
+            height: 64px;
+            width: 128px;
+            background-image: url(../img/forexclub-aidents-Phone.png);
+        }
+    }
+
+    .useful-links {
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+        height: 25px;
+        font-weight: 500;
+        div:first-child {
+            display: none;
+        }
+        a {
+            margin: 0 16px;
+            @media (max-width: @widthWide-2) {
+                margin: 0 5px;
+            }
+            @media (max-width: @widthWide-1) {
+                font-size: 18px;
+            }
+        }
+        :last-child {
+            margin-right: 0;
+        }
+        @media (max-width: @widthPhone-1) {
+            width: 24px;
+            height: 23px;
+            transform: translateY(80%);
+            background-image: url(../img/menu-btn-phone.png);
+            cursor: pointer;
+            a {
+                display: none;
+            }
+//            position: relative;
+//            left: 0%;
+//            animation-name: closeSubMenu;
+//            animation-duration: 1s;
+        }
+    }
+
+    .sub-menu {
+        width: 70%;
+        height: 100%;
+        background-image: none;
+        background-color: #eef2f5;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        left: 30%;
+        top: 0%;
+        animation-name: openSubMenu;
+        animation-duration: 1s;
+        a {
+            display: auto;
+            margin-left: 22px;
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        div:first-child {
+            display: block;
+            position: relative;
+            margin-bottom: 41px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 19px;
+            margin-left: 22px;
+            margin-top: 16px;
+            white-space: nowrap;
+        }
+        div:first-child:after {
+            content: '';
+            display: inline-block;
+            height: 24px;
+            width: 23px;
+            background-image: url(../img/menu-close-phone.png);
+            background-size: 24px 23px;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            position: absolute;
+            left: 100%;
+            transform: translateX(-100%);
+        }
+        div:hover:first-child:after {
+            cursor: pointer;
+        }
+
+    }
+}
+
+main {
+    margin-top: 64px;
+    @media (max-width: @widthPhone-1) {
+        margin-top: 24px;
+    }
+}
+
+.bitcoin-rate-reg {
+    .page-size();
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: @widthPhone-1) {
+        flex-direction: column;
+    }
+    .bitcoin-price {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        @media (max-width: @widthPhone-1) {
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        &__bitcoin {
+            margin-right: 24px;
+            @media (max-width: @widthWide-2) {
+                margin-right: 5px;
+            }
+            @media (max-width: @widthPhone-1) {
+                order: 2;
+                margin: 0 auto;
+                margin-bottom: 8px;
+                font-size: 40px;
+            }
+        }
+        &__data-time {
+            display: flex;
+            align-items: flex-end;
+            flex-basis: 50%;
+            padding-bottom: 8px;
+            @media (max-width: @widthPhone-1) {
+                order: 1;
+                flex-basis: auto;
+                margin: 0 auto;
+                margin-bottom: 24px;
+                :first-child {
+                    margin-right: 8px
+                }
+            }
+        }
+        &__price {
+            margin-right: 16px;
+            font-size: 48px;
+            @media (max-width: @widthWide-2 + 100px) {
+                margin-right: 5px;
+            }
+            @media (max-width: @widthPhone-1) {
+                order: 3;
+                margin: 0 auto;
+                font-size: 40px;
+            }
+        }
+        &__dynamics {
+            display: flex;
+            align-items: flex-end;
+            font-size: 32px;
+            color: #4EB43A;
+            padding-bottom: 6px;
+            @media (max-width: @widthWide-2 + 100px) {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            @media (max-width: @widthPhone-1) {
+                order: 5;
+                margin: 0 auto;
+            }
+        }
+        &__price-in-rub {
+            margin: 4px 0;
+            font-size: 24px;
+            font-weight: 400;
+            flex-basis: 50%;
+            @media (max-width: @widthPhone-1) {
+                order: 4;
+                margin: 0 auto;
+                margin-bottom: 16px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .deal {
+        width: 50%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @media (max-width: @widthPhone-1) {
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        &__coment {
+            font-weight: 700;
+            background: url(../img/mark-rows.png) 0px 0px no-repeat;
+            padding-left: 40px;
+            padding-top: 3px;
+            @media (max-width: @widthPhone-1) {
+                background-image: none;
+                padding: 0;
+                text-align: center;
+                margin-bottom: 24px;
+
+            }
+        }
+        &__top-reg-btn {
+            width: 202px;
+            height: 48px;
+            line-height: 48px;
+            margin-left: 40px;
+            margin-top: 16px;
+            @media (max-width: @widthPhone-1) {
+                padding: 0;
+                margin: 0 auto;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+    @media (max-width: @widthPhone-1) {
+
+        .deal:before {
+            content: '';
+            display: block;
+            height: 24px;
+            width: 24px;
+            margin: 0 auto;
+            background-image: url(../img/mark-rows-phone.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 19px;
+        }
+        .deal li:last-child {
+            margin: 0 auto;
+            width: 202px;
+        }
+    }
+}
+
+
+.form-bg {
+    display: none;
+    position: fixed;
+    border: none;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    @media (max-width: @widthPhone-1) {
+        background-color: rgba(51, 51, 51, 0.7);
+    }
+    .reg-window {
+        position: fixed;
+        width: 375px;
+        height: 390px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 32px 49px 48px 46px;
+        box-sizing: border-box;
+        border: none;
+        background-color: #ffffff;
+        @media (max-width: 420px) {
+            width: 96%;
+            padding: 32px 3% 48px 3%;
+        }
+        &--cross {
+            height: 12px;
+            width: 12px;
+            background-image: url(../img/menu-close-phone.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+        &--cross:hover {
+            cursor: pointer;
+        }
+        &--text1 {
+            display: block;
+            margin: 0;
+            margin-bottom: 41px;
+            @media (max-width: 280px) {
+                margin-bottom: 5px;
+            }
+            @media (max-width: 235px) {
+                font-size: 10px;
+            }
+        }
+
+        &__field {
+            border: none;
+            margin-bottom: 8px;
+            background-color: #eef2f5;
+            width: 280px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: normal;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            @media (max-width: 420px) {
+                width: 100%;
+            }
+        }
+        &__field:active,
+        :hover,
+        :focus {
+            outline: 0;
+            outline-offset: 0;
+        }
+        &__btn {
+            width: 280px;
+            height: 40px;
+            background-color: #4eb43a;
+            margin: 0 auto;
+            font-size: 18px;
+            margin-bottom: 16px;
+             @media (max-width: 420px) {
+                width: 100%;
+                 font-size: 12px;
+            }
+        }
+        &__checkbox {
+            float: left;
+            box-sizing: border-box;
+            width: 16px;
+            margin-top: 2px;
+            margin-right: 8px;
+        }
+        &--text2 {
+            font-size: 14px;
+            color: #6f7780;
+            float: left;
+            box-sizing: border-box;
+            width: 90%;
+            margin: 0;
+            margin-bottom: 41px;
+            cursor: pointer;
+            @media (max-width: 235px) {
+                font-size: 10px;
+            }
+        }
+        &--text3 {
+            clear: left;
+            font-size: 14px;
+            color: #6f7780;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            @media (max-width: 235px) {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.application {
+    .page-size();
+    margin-top: 65px;
+    margin-bottom: 35px;
+    border: dashed 1px #D6DBE3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 35px 0;
+    &__text-rate {
+        font-size: 24px;
+        color: #FF6F08;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 16px;
+        @media (max-width: @widthPhone-1) {
+            font-size: 18px
+        }
+    }
+    &__text-platforms {
+        font-size: 18px;
+        color: #926C51;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 16px;
+        @media (max-width: @widthPhone-1) {
+            font-size: 14px
+        }
+    }
+    .apps {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            height: 100%;
+        }
+        &__item {
+            height: 48px;
+            width: 173px;
+            @media (max-width: @widthPhone-1) {
+                height: 40px;
+                width: 152px;
+            }
+            @media (max-width: 390px) {
+                height: 95%;
+                width: 95%;
+            }
+        }
+        &--app-store {
+            margin-right: 4px;
+            @media (max-width: 390px) {
+                margin-right: 0;
+            }
+        }
+        &--google-play {
+            margin-left: 4px;
+            @media (max-width: 390px) {
+                margin-left: 0;
+            }
+        }
+
+    }
+}
+
+.how-make-money {
+    .page-size();
+    box-sizing: border-box;
+    &__table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        @media (max-width: @widthWide-1) {}
+        caption {
+            margin-bottom: 85px;
+            @media (max-width: @widthPhone-1) {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+        }
+        th {
+            font-size: 32px;
+            padding-bottom: 24px;
+            padding-top: 48px;
+
+            background-image: url(../img/table-line.png);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100% 1px;
+
+            @media (max-width: @widthPhone-1) {
+                font-size: 24px;
+            }
+        }
+        th:last-child {
+            color: #FF6F08;
+            background-color: rgba(255, 44, 3, 0.05);
+        }
+
+        th:not(:last-child) {
+            padding-right: 30px;
+            @media (max-width: @widthPhone-1) {
+                display: block;
+            }
+        }
+        th:first-child {
+            @media (max-width: @widthPhone-1) {
+                display: none;
+            }
+        }
+        @media (max-width: @widthPhone-1) {
+            font-size: 14px;
+        }
+        tr:not(:last-child) {
+            background-image: url(../img/table-line.png);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100% 1px;
+        }
+        tr:nth-child(5) {
+            background-image: none;
+        }
+        tr:last-child td:not(:last-child) {
+            @media (max-width: @widthPhone-1) {
+                display: none;
+            }
+        }
+        tr:last-child td:last-child {
+            padding-top: 60px;
+            padding-left: 24px;
+            @media (max-width: @widthPhone-1) {
+                background-color: #FFFFFF;
+                padding-left: 0;
+            }
+        }
+        td {
+            padding: 24px 24px 16px 24px;
+            vertical-align: top;
+            @media (max-width: @widthWide-1) {
+                padding: 24px 8px 16px 8px;
+                font-size: 16px;
+            }
+            @media (max-width: 360px) {
+                padding: 24px 0px 16px 0px;
+                font-size: 14px;
+            }
+        }
+        td:first-child {
+            font-weight: bold;
+            white-space: nowrap;
+            @media (max-width: @widthPhone-1) {
+                font-size: 16px;
+                padding-left: 0px;
+            }
+        }
+        td:last-child {
+            background-color: rgba(255, 44, 3, 0.05);
+            @media (max-width: @widthPhone-1) {
+                padding-top: 60px;
+                padding-left: 8px;
+            }
+            @media (max-width: 360px) {
+                padding-left: 0px;
+            }
+        }
+        td:nth-child(2) {
+            @media (max-width: @widthPhone-1) {
+                padding: 0px;
+            }
+        }
+        td:not(:last-child) {
+            @media (max-width: @widthPhone-1) {
+                display: block;
+                padding-right: 8px;
+            }
+            @media (max-width: 360px) {
+                padding-right: 0px;
+            }
+        }
+    }
+    &__btn {
+        width: 345px;
+        height: 55px;
+        font-size: 24px;
+        box-sizing: border-box;
+        line-height: 55px;
+        margin-right: 8px;
+        @media (max-width: @widthPhone-1) {
+            margin: 0 auto;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+
+        }
+    }
+    &__text-bonus {
+        @media (max-width: @widthPhone-1) {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__text-bonus:before {
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/giftcard.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+        margin-right: 8px;
+    }
+}
+
+.crypto-rate {
+    .page-size();
+     @media (max-width: 320px) {
+         margin: 0 4px;
+    }
+    .crypto-rate-table {
+        width: 100%;
+        caption {
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 38px;
+        }
+        &--none {display: none;}
+        &--mob {display: none;}    
+        &__price {
+            text-align: right;
+            font-weight: 600;
+        }
+        &__dinamycs {
+            text-align: right;
+            &--green {color: #4EB43A}
+            &--red {color: #F65151}
+        }
+        &__crypto-name {
+            font-weight: 600;
+        }
+        &__btn-cell {
+            width: 1%;
+        }
+        &__space {
+            height: 16px !important;
+            width: 100%;
+            background-image: url(../img/table-line.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 1px;
+        }
+        td {
+            //border: solid 1px;
+            font-size: 24px;
+            font-weight: normal;
+            height: 50px;
+            
+        }
+        @media (max-width: @widthPhone-1) {
+            &--mob {display: table-cell;}
+            &--desktop {display: none;}
+            caption {
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
+            &__space {
+                height: 8px;
+                background-image: none !important;
+            }
+            td {
+                font-size: 13px;
+                height: auto;
+            }
+            &__crypto-name {
+                 font-size: 16px !important;
+                vertical-align: bottom;
+            }
+            &__price {
+                text-align: left;
+                vertical-align: top;
+            }
+            &__dinamycs {
+                text-align: left;
+                vertical-align: top;
+            }
+            &__btn-cell {
+            width: 72px;
+        }
+        }
+        &__crypto {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &__btn {
+            height: 32px;
+            width: 87px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #6F7780;
+            border: 1px solid #E5E6EA;
+            border-radius: 2px;
+            background: none;
+            @media (max-width: @widthPhone-1) {
+                height: 24px;
+                width: 72px;
+                font-size: 13px;
+            }
+        }
+        &__btn:hover {
+            cursor: pointer;
+        }
+        &--etherium {
+            background-image: url(../img/etherium3.svg);
+        }
+        &--ripple {
+            background-image: url(../img/ripple.svg);
+        }
+        &--bitcoin-cash {
+            background-image: url(../img/bitcoin-cash.svg);
+        }
+        &--iota {
+            background-image: url(../img/iota.svg);
+        }
+        &--dash {
+            background-image: url(../img/dash.svg);
+        }
+        &--monero {
+            background-image: url(../img/monero.svg);
+        }
+    }
+}
+
+.bitcoin-news {
+    .page-size();
+    h2 {
+        text-align: center;
+        margin: 0 0 64px 0;
+        @media (max-width: @widthPhone-1) {
+            font-size: 32px;
+            margin: 0 0 48px 0;
+        }
+    }
+    .bitcoin-news-bloks {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        p {
+            color: #6F7780;
+            font-size: 14px;
+        }
+        a:hover {
+            color: #FF6F08;
+        }
+        &__block {
+            width: 45%;
+            margin: 0 2.5%;
+            @media (max-width: @widthPhone-1) {
+                width: 100%;
+                margin: 0;
+
+            }
+
+        }
+        &__block:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.banks {
+    .page-size();
+    h3 {
+        text-align: center;
+        margin-bottom: 73px;
+        @media (max-width: @widthWide-1) {
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+    }
+    .banks-logo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &--citybank {
+            width: 20%;
+        }
+        &--hsbc {
+            width: 18%;
+        }
+        &--commerzbank {
+            width: 32%;
+        }
+        &--bitfinex {
+            width: 29%;
+        }
+        &--barclays {
+            width: 25%;
+        }
+        &--jpmorganchase {
+            width: 35%;
+        }
+        &--itbit {
+            width: 10%;
+        }
+        &--kraken {
+            width: 27%;
+        }
+        &--nowura {
+            width: 22%;
+        }
+        &--poloniex {
+            width: 24%;
+        }
+        &--gdax {
+            width: 20%;
+        }
+        &--creditsuisse {
+            width: 32%;
+        }
+        &__block {
+            height: 72px;
+            margin: 5px 0;
+            img {
+                display: block;
+                margin: 0 auto;
+                object-fit: scale-down;
+                width: 100%;
+                height: 100%;
+            }
+            @media (max-width: @widthWide-1) {
+                width: 45%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.bitcoin-info {
+    .page-size();
+    h4 {
+        margin-bottom: 0.2rem;
+    }
+    .bitcoin-warning {
+        margin: 2rem 0;
+        color: blue;
+    }
+    p {
+        margin: 0;
+    }
+    @media (max-width: @widthPhone-1) {
+        font-size: 14px;
+        padding-top: 32px;
+    }
+}
+
+.payments {
+    .page-size();
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: @widthPhone-1) {
+        flex-direction: column;
+    }
+    .coll-left {
+        width: 48%;
+        font-size: 12px;
+        color: #6F7780;
+        @media (max-width: @widthPhone-1) {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    .coll-right {
+        width: 48%;
+        @media (max-width: @widthPhone-1) {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+        .pay-sys {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: @widthPhone-1) {justify-content: center;}
+            &--visa {
+                width: 18%;
+                @media (max-width: @widthPhone-1) {width: 34%;}
+            }
+            &--mastercard {
+                width: 11%;
+                @media (max-width: @widthPhone-1) {width: 21%;}
+            }
+            &--mir {
+                width: 21%;
+                @media (max-width: @widthPhone-1) {width: 38%;}
+            }
+            &--webmoney {
+                width: 40%;
+                @media (max-width: @widthPhone-1) {width: 48%;}
+            }
+            &--yandexmoney {
+                width: 30%;
+                @media (max-width: @widthPhone-1) {width: 48%;}
+            }
+            &--qiwi {
+                width: 18%;
+                @media (max-width: @widthPhone-1) {width: 28%;}
+            }
+            &--skrill {
+                width: 16%;
+                @media (max-width: @widthPhone-1) {width: 25%;}
+            }
+            &--neteller {
+                width: 26%;
+                @media (max-width: @widthPhone-1) {width: 40%;}
+            }
+            &__block {
+                margin: 5px 1%;
+                @media (max-width: @widthPhone-1) {margin: 5px 0;}
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    object-fit: scale-down;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
