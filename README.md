@@ -1,1 +1,0 @@
-# yehordorosh.github.io
